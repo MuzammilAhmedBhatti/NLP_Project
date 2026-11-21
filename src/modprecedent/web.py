@@ -14,6 +14,7 @@ from .app import APP_CSS, _case_html, _decisions, _esc
 from .cli import load_index
 from .models import PredictionRequest
 from .predictor import Predictor
+from .theme import STYLE
 
 site = FastAPI()
 app_index = lru_cache(maxsize=1)(load_index)
@@ -39,7 +40,7 @@ def page(title, body, active=None):
     if active:
         body = f'<div class="shell"><nav class="rail">{rail}</nav><main class="work">{body}</main></div>'
     return HTMLResponse(
-        f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{_esc(title)} · ModPrecedent</title><style>{APP_CSS.splitlines()[1]}{css}</style><header><a class="brand" href="/">ModPrecedent</a><nav><a href="/precedents">Precedents</a><a href="/predict">Open workspace</a></nav></header>{body}</html>'
+        f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{_esc(title)} · ModPrecedent</title><style>{APP_CSS.splitlines()[1]}{css}{STYLE}</style><header><a class="brand" href="/">ModPrecedent</a><nav><a href="/precedents">Precedents</a><a href="/predict">Open workspace</a></nav></header>{body}</html>'
     )
 
 
