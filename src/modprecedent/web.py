@@ -61,7 +61,7 @@ def page(title, body, active=None):
 def home():
     return page(
         "Home",
-        """<main class="hero"><section><h1>Would you uphold the decision?</h1><p>Explore how the Oversight Board weighs a social media post, its context, and past decisions.</p><a class="cta" href="/predict">Analyze a post</a></section><div class="art" aria-hidden="true"><div class="folder"><small>OVERSIGHT BOARD</small><h2>Case file</h2><span>Post and context</span><span>Meta’s action</span><span>Related precedents</span></div></div></main>""",
+        """<main class="hero"><section><h1>Would you uphold the decision?</h1><p>Explore how the Oversight Board weighs a social media post, its context, and past decisions.</p><a class="cta" href="/predict">Analyze a post</a></section><div class="art"><div class="folder" aria-hidden="true"><small>OVERSIGHT BOARD</small><h2>Case file</h2><span>Post and context</span><span>Meta’s action</span><span>Related precedents</span></div><button class="motion-toggle" aria-label="Pause case file animation" aria-pressed="false" onclick="const paused=this.getAttribute(\'aria-pressed\')===\'true\';this.setAttribute(\'aria-pressed\',String(!paused));this.textContent=paused?\'Pause motion\':\'Resume motion\'">Pause motion</button></div></main>""",
     )
 
 

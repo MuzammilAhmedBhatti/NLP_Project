@@ -1,6 +1,24 @@
 """Shared Casebook controls, reading surfaces and motion."""
 
 STYLE = """
+@media(prefers-reduced-motion:no-preference){
+ .folder{animation:fileFloat 4.6s ease-in-out infinite alternate}
+ .folder span{animation:paperMark 6s ease-in-out infinite;background:linear-gradient(90deg,#c6dba6,transparent) left center/0% 90% no-repeat}
+ .folder span:nth-of-type(2){animation-delay:1.4s}.folder span:nth-of-type(3){animation-delay:2.8s}
+ @keyframes fileFloat{to{translate:0 -9px;rotate:-2deg}}
+ @keyframes paperMark{0%,55%,100%{background-size:0% 90%}25%,40%{background-size:94% 90%}}
+ .card,.tablewrap,.case-reader,.split>article{animation:unfile .38s cubic-bezier(.2,.8,.25,1) backwards}
+ .card:nth-of-type(2){animation-delay:.06s}.card:nth-of-type(3){animation-delay:.12s}
+ @keyframes unfile{from{opacity:0;translate:0 9px}}
+ form button:disabled,.upload:has(+.loading){background-image:repeating-linear-gradient(115deg,transparent 0 12px,#fff5 12px 20px);background-size:44px 100%;animation:travel 1s linear infinite}
+ @keyframes travel{to{background-position:44px 0}}
+ .rail a:hover,.rail a:focus-visible{translate:3px 0}.rail a{transition:translate .2s ease,background-color .2s}
+ .tablewrap img{animation:plotIn .65s ease-out}
+ @keyframes plotIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+}
+.motion-toggle{position:absolute;bottom:-2rem;right:8%;font:600 .85rem system-ui;padding:.35rem .85rem;border:1px solid #bbc3aa;background:#fffaf1;color:#34462f}
+.art:has(.motion-toggle[aria-pressed=true]) .folder,.art:has(.motion-toggle[aria-pressed=true]) span{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.motion-toggle{display:none}}
 :root{--olive:#34462f;--ink:#243322;--peach:#ff947c;--iris:#ddd1ff;--line:#d8d7c8;--spring:cubic-bezier(.22,1.32,.36,1)}
 body{color:var(--ink);background:#faf7ee}header{background:#fffdf5;border-color:var(--line)}header nav a{text-decoration:none;font-weight:600;padding:.45rem .8rem;border-radius:2rem}header nav a:last-child{background:var(--olive);color:white}
 .brand{letter-spacing:-.055em}.brand:before{content:"";display:inline-block;width:.7em;height:.7em;margin-right:.4em;background:var(--peach);border-radius:3px;box-shadow:3px -3px var(--olive);transform:rotate(-9deg)}
