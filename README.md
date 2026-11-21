@@ -1,5 +1,9 @@
 # ModPrecedent
 
+## Reproduce the approved study
+
+Install the application and research dependencies with `python -m pip install -e ".[frontend,rag,dev]"`. Run `python -m modprecedent.experiments` from the repository root. The first run downloads FLAN-T5-small for local generation and MiniLM for dense retrieval. The study writes per-case predictions, outcome and policy metrics, citation coverage, a chart, and retrieval sensitivity results to `reports/generated/latest`. Set `MODPRECEDENT_LLM_BACKEND=flan` to use the same local model in the web application. The three approved examples form a small course demonstration.
+
 ModPrecedent is a leakage-aware retrieval-augmented assistant for predicting whether Meta's Oversight Board would **uphold** or **overturn** a moderation action. It retrieves policy passages and analogous published decisions, produces structured explanations with citations, and compares three experimental systems.
 
 The application includes the approved **Casebook** interface, a warm editorial design built around source reading and evidence traceability. Its five views cover prediction input, results, the precedent library, case details, and evaluation.
@@ -17,7 +21,7 @@ The default LLM is local Ollama. If Ollama is unavailable, the application retur
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,frontend]"
 python -m pytest
 python -m modprecedent.cli index
 python -m modprecedent.cli predict --text "A news page neutrally quotes a designated group announcing a policy change." --action removed --system S2
@@ -51,7 +55,7 @@ python -m modprecedent.cli candidates
 Review `data/evaluation/candidate_cases.jsonl`, edit descriptions if needed, and change `status` to `approved`. Final evaluation refuses to run while any case is pending:
 
 ```powershell
-python -m modprecedent.cli evaluate --dataset data/evaluation/approved_cases.jsonl
+python -m modprecedent.experiments
 ```
 
 For each held-out case, `as_of_date` excludes contemporaneous and future documents. The case itself can also be excluded by ID at retrieval time. Reports contain accuracy, macro precision/recall/F1, set-based policy F1, citation coverage, and mean retrieval relevance. No production metrics are hard-coded.

@@ -16,5 +16,6 @@ def test_candidate_excludes_ruling_phrase():
         published_date="2024-01-01",
         summary="A post described a contested political event in substantial contextual detail without an explicit outcome. The Oversight Board overturned Meta.",
     )
+    decision.meta_action = "removed"
     row = candidate_from_decision(decision)
     assert row and "overturned" not in row["input"]["post_description"].lower()

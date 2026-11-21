@@ -29,6 +29,7 @@ class HybridIndex:
         self.sparse = None
         self.dense: np.ndarray | None = None
         self._encoder = None
+        self.diversify = False
 
     def build(self, chunks: list[Chunk], dense: bool = False) -> None:
         self.chunks = chunks
@@ -73,10 +74,20 @@ class HybridIndex:
                 continue
             if exclude_case_id and chunk.case_id == exclude_case_id:
                 continue
-            if before and chunk.published_date and chunk.published_date >= before:
+            if before and (chunk.published_date is None or chunk.published_date >= before):
                 continue
             valid.append(i)
-        ranked = sorted(valid, key=lambda i: float(scores[i]), reverse=True)[:k]
+        ranked = sorted(valid, key=lambda i: float(scores[i]), reverse=True)
+        if self.diversify:
+            seen = set()
+            distinct = []
+            repeated = []
+            for i in ranked:
+                case = self.chunks[i].case_id
+                (repeated if case in seen else distinct).append(i)
+                seen.add(case)
+            ranked = distinct + repeated
+        ranked = ranked[:k]
         return [Hit(self.chunks[i], float(scores[i])) for i in ranked]
 
     def save(self, directory: Path) -> None:
@@ -89,6 +100,8 @@ class HybridIndex:
         )
         if self.dense is not None:
             np.save(directory / "dense.npy", self.dense)
+        else:
+            (directory / "dense.npy").unlink(missing_ok=True)
         (directory / "metadata.json").write_text(
             json.dumps({"model_name": self.model_name}), encoding="utf-8"
         )

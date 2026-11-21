@@ -1,0 +1,4 @@
+system,n,accuracy,macro_f1,policy_f1,valid_inline_citation_coverage,policy_exact_accuracy
+S0,3,0.3333333333333333,0.25,0.0,0.0,0.0
+S1,3,0.3333333333333333,0.25,0.0,0.0,0.0
+S2,3,0.3333333333333333,0.25,0.0,0.0,0.0

@@ -13,5 +13,6 @@ data/index/*
 !data/index/.gitkeep
 reports/generated/*
 !reports/generated/.gitkeep
+!reports/generated/latest/
 .env
 

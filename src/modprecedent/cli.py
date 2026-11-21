@@ -19,7 +19,14 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name
 
 def decisions_path() -> Path:
     real = Path("data/raw/decisions.jsonl")
-    return real if real.exists() else Path("data/processed/sample_decisions.jsonl")
+    processed = Path("data/processed/decisions.jsonl")
+    return (
+        real
+        if real.exists()
+        else processed
+        if processed.exists()
+        else Path("data/processed/sample_decisions.jsonl")
+    )
 
 
 def load_index() -> HybridIndex:

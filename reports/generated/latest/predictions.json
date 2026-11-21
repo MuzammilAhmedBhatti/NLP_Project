@@ -1,0 +1,539 @@
+[
+  {
+    "case_id": "IG-XLA2OKM2",
+    "gold": "overturned",
+    "gold_policies": [
+      "Regulated goods"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.5917020440101624,
+    "reasoning": "Meta action: removed.",
+    "policies": [
+      "Overturn"
+    ],
+    "citations": [],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-XLA2OKM2",
+    "gold": "overturned",
+    "gold_policies": [
+      "Regulated goods"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.6663714647293091,
+    "reasoning": "Meta action: removed. Content: An Instagram user uses memes and film clips to describe side effects from prescription medications during pregnancy and confusion after clinically administered fentanyl during labor.",
+    "policies": [
+      "Meta action: removed. Content: An Instagram user uses memes and film clips to describe side effects from prescription medications during pregnancy and confusion after clinically administered fentanyl during labor. Evidence: [dc39bc0a79f9433d] Eating Disorder Awareness Post"
+    ],
+    "citations": [
+      {
+        "chunk_id": "dc39bc0a79f9433d",
+        "case_id": "BUN-LJFRC0VQ",
+        "title": "Eating Disorder Awareness Posts",
+        "url": "https://www.oversightboard.com/decision/bun-ljfrc0vq/",
+        "excerpt": "expressions with advice on how to communicate more thoughtfully. Even if viewed in isolation, it is difficult to understand how this image could have been considered violating. Sharing the post during Eating Disorders Awareness Week, coupled with awareness-raising hashtags and explanations in the caption, additionally confirms that the user was sharing suppo",
+        "score": 0.2404,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ec088acf43d6bf4f",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "1. To better inform users of how the Misinformation Community Standard manipulated media policy is enforced, Meta should explain the different informative labels that Meta uses for manipulated media, including that the High-Risk label is applied in relation to a critical event, and what counts as a critical event. The Board will consider this recommendation ",
+        "score": 0.2335,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2308,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "3d445632d49ce2d3",
+        "case_id": "FB-40OC4FCM",
+        "title": "AI-Generated Video of Female Campaigner",
+        "url": "https://www.oversightboard.com/decision/fb-40oc4fcm/",
+        "excerpt": "1. To address the gap in the Bullying and Harassment policy, Meta should publicly define \u201cunwanted manipulated imagery\u201d as including deepfakes of a private individual saying or doing things they did not say or do, as well as manipulation of a person\u2019s appearance. The Board will consider this recommendation implemented when the policy has been publicly update",
+        "score": 0.2307,
+        "source_type": "policy"
+      }
+    ],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-XLA2OKM2",
+    "gold": "overturned",
+    "gold_policies": [
+      "Regulated goods"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.6950037479400635,
+    "reasoning": "Meta action: removed. Content: An Instagram user uses memes and film clips to describe side effects from prescription medications during pregnancy and confusion after clinically administered fentanyl during labor.",
+    "policies": [
+      "Meta action: removed. Content: An Instagram user uses memes and film clips to describe side effects from prescription medications during pregnancy and confusion after clinically administered fentanyl during labor."
+    ],
+    "citations": [
+      {
+        "chunk_id": "dc39bc0a79f9433d",
+        "case_id": "BUN-LJFRC0VQ",
+        "title": "Eating Disorder Awareness Posts",
+        "url": "https://www.oversightboard.com/decision/bun-ljfrc0vq/",
+        "excerpt": "expressions with advice on how to communicate more thoughtfully. Even if viewed in isolation, it is difficult to understand how this image could have been considered violating. Sharing the post during Eating Disorders Awareness Week, coupled with awareness-raising hashtags and explanations in the caption, additionally confirms that the user was sharing suppo",
+        "score": 0.2404,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ec088acf43d6bf4f",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "1. To better inform users of how the Misinformation Community Standard manipulated media policy is enforced, Meta should explain the different informative labels that Meta uses for manipulated media, including that the High-Risk label is applied in relation to a critical event, and what counts as a critical event. The Board will consider this recommendation ",
+        "score": 0.2335,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2308,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "3d445632d49ce2d3",
+        "case_id": "FB-40OC4FCM",
+        "title": "AI-Generated Video of Female Campaigner",
+        "url": "https://www.oversightboard.com/decision/fb-40oc4fcm/",
+        "excerpt": "1. To address the gap in the Bullying and Harassment policy, Meta should publicly define \u201cunwanted manipulated imagery\u201d as including deepfakes of a private individual saying or doing things they did not say or do, as well as manipulation of a person\u2019s appearance. The Board will consider this recommendation implemented when the policy has been publicly update",
+        "score": 0.2307,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "2081e654887b03d5",
+        "case_id": "BUN-4CT6W0SP",
+        "title": "Medicine-Related News in Malaysia",
+        "url": "https://www.oversightboard.com/decision/bun-4ct6w0sp/",
+        "excerpt": "Restricted Goods and Services policy prohibits \u201cattempts to buy, sell or trade prescription drugs,\u201d as well as \u201casks for prescription drugs, except when content discusses the affordability, accessibility or efficacy of prescription drugs in a medical context.\u201d Prescription drugs are defined in the policy as \u201cdrugs that require a prescription or medical profe",
+        "score": 0.3143,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "6fe060825c6227a0",
+        "case_id": "BUN-FQFVJ43O",
+        "title": "Graphic Videos From Iran",
+        "url": "https://www.oversightboard.com/decision/bun-fqfvj43o/",
+        "excerpt": "Two users appealed Meta\u2019s decisions to remove videos posted on Instagram, which depicted graphic content from Iran in awareness-raising contexts, during nationwide anti-government protests. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored both posts.",
+        "score": 0.3089,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "597cd0c9305531b2",
+        "case_id": "BUN-FQFVJ43O",
+        "title": "Graphic Videos From Iran",
+        "url": "https://www.oversightboard.com/decision/bun-fqfvj43o/",
+        "excerpt": "Violent and Graphic Content policy , Meta prohibits \u201cvideos of people, living or deceased, in non-medical contexts, depicting [...] visible innards, such as exposed organs, bones or muscle tissue on living or deceased persons; burning or charred persons; or throat-slitting.\u201d However, the policy does \u201crecognize that users may share content in order to shed li",
+        "score": 0.2958,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "1343c26b56bf7fa2",
+        "case_id": "BUN-4CT6W0SP",
+        "title": "Medicine-Related News in Malaysia",
+        "url": "https://www.oversightboard.com/decision/bun-4ct6w0sp/",
+        "excerpt": "attempt to buy, sell, trade or request prescription drugs. Consequently, Meta restored all posts, republished the page and reversed the strikes against the administrator\u2019s account and the page.",
+        "score": 0.2921,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "1b4afb1d6e51a1bf",
+        "case_id": "BUN-9DUILXWR",
+        "title": "Graphic Content in Awareness-Raising Context",
+        "url": "https://www.oversightboard.com/decision/bun-9duilxwr/",
+        "excerpt": "Four users appealed Meta's decision to remove their Facebook and Instagram posts that depicted graphic content in an awareness-raising context. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored all four posts.",
+        "score": 0.2915,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "68cd443bd7d303c1",
+        "case_id": "FB-40OC4FCM",
+        "title": "AI-Generated Video of Female Campaigner",
+        "url": "https://www.oversightboard.com/decision/fb-40oc4fcm/",
+        "excerpt": "eating or exercise but addressed the importance of menstrual health education around conditions like endometriosis for women and girls. The post has been viewed over 5,000 times, received over 200 reactions, and over 50 comments. Multiple comments beneath the video from various users ridicule the woman\u2019s appearance, mainly for her weight and for her wearing ",
+        "score": 0.2821,
+        "source_type": "precedent"
+      }
+    ],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-46USUH23",
+    "gold": "overturned",
+    "gold_policies": [
+      "Misinformation"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.5307924151420593,
+    "reasoning": "Meta action: left_up.",
+    "policies": [
+      "overturn"
+    ],
+    "citations": [],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-46USUH23",
+    "gold": "overturned",
+    "gold_policies": [
+      "Misinformation"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.5770350098609924,
+    "reasoning": "Meta action: left_up. Content: During the Israel-Iran conflict, a Facebook page presents footage of damaged buildings as live reporting from Haifa. Users question its authenticity. A fact-checker identified a similar clip as AI-generated. The post carries no",
+    "policies": [
+      "Meta's decision to uphold or overturn Meta's decision to uphold"
+    ],
+    "citations": [
+      {
+        "chunk_id": "49eadc3ec3efddf1",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "The case content meets the eligibility criteria for fact-checking under Meta\u2019s Misinformation policy. The post contains a verifiable claim, does not involve speech from politicians, and does not have an AI transparency label that would make the content ineligible for fact-checking (i.e., the misleading nature of the post is in how it was digitally created or",
+        "score": 0.3128,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "410f8bbe8b790431",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "merit a different treatment, such as removal. The content poses a \"particularly high risk of materially deceiving the public on a matter of public importance\u201d as it concerns a significant political issue in Philippine politics. Similar videos were circulating on Meta\u2019s platforms and had been rated False by Meta\u2019s fact-checkers in the Philippines. The volume ",
+        "score": 0.3125,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "96a48b34e3f319f4",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "to overenforcement. At the same time, Meta\u2019s current approach is not effective in responding to actors who tweak content in subtle ways to game the system and evade enforcement. Meta should allocate sufficient resources, automated or otherwise, to ensure that fact-checkers\u2019 ratings are applied effectively.",
+        "score": 0.3074,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "2d11a06d92cc3d99",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "The Board finds that the four posts did not violate any of Meta's content policies, including its rules on Hateful Conduct, and should not have been removed. Even if they had been violating, this should have resulted in a single strike, which would not be a sufficient basis to unpublish the page. As Meta now concedes, no elements of the page were violating. ",
+        "score": 0.3053,
+        "source_type": "policy"
+      }
+    ],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-46USUH23",
+    "gold": "overturned",
+    "gold_policies": [
+      "Misinformation"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.6696504950523376,
+    "reasoning": "Meta action: left_up. Content: During the Israel-Iran conflict, a Facebook page presents footage of damaged buildings as live reporting from Haifa. Users question its authenticity. A fact-checker identified a similar clip as AI-generated. The post carries no",
+    "policies": [
+      "Meta action: left_up. Content: During the Israel-Iran conflict, a Facebook page presents footage of damaged buildings as live reporting from Haifa. Users question its authenticity. A fact-checker identified a similar clip as AI-generated. The post carries no"
+    ],
+    "citations": [
+      {
+        "chunk_id": "49eadc3ec3efddf1",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "The case content meets the eligibility criteria for fact-checking under Meta\u2019s Misinformation policy. The post contains a verifiable claim, does not involve speech from politicians, and does not have an AI transparency label that would make the content ineligible for fact-checking (i.e., the misleading nature of the post is in how it was digitally created or",
+        "score": 0.3128,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "410f8bbe8b790431",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "merit a different treatment, such as removal. The content poses a \"particularly high risk of materially deceiving the public on a matter of public importance\u201d as it concerns a significant political issue in Philippine politics. Similar videos were circulating on Meta\u2019s platforms and had been rated False by Meta\u2019s fact-checkers in the Philippines. The volume ",
+        "score": 0.3125,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "96a48b34e3f319f4",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "to overenforcement. At the same time, Meta\u2019s current approach is not effective in responding to actors who tweak content in subtle ways to game the system and evade enforcement. Meta should allocate sufficient resources, automated or otherwise, to ensure that fact-checkers\u2019 ratings are applied effectively.",
+        "score": 0.3074,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "2d11a06d92cc3d99",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "The Board finds that the four posts did not violate any of Meta's content policies, including its rules on Hateful Conduct, and should not have been removed. Even if they had been violating, this should have resulted in a single strike, which would not be a sufficient basis to unpublish the page. As Meta now concedes, no elements of the page were violating. ",
+        "score": 0.3053,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "9c56ab3f34d33bee",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": ", Meta informed the Board that to apply a High-Risk label, the content must (i) create a particularly high risk of materially deceiving the public on a matter of public importance; and (ii) there are reliable indicators that the content was digitally created or altered. The High-Risk AI label is similar to the High-Risk label, but for content that has reliab",
+        "score": 0.3899,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "d48f096441f8b5d0",
+        "case_id": "FB-Q8WG6571",
+        "title": "Corruption Claims Involving Politician\u2019s Children",
+        "url": "https://www.oversightboard.com/decision/fb-q8wg6571/",
+        "excerpt": "The post has been shared over 4,000 times and has over 1.7 million views. On the day it was posted, two different Meta classifiers identified the post and sent it for human review. One of the classifiers is designed to detect viral content that potentially violates Facebook\u2019s Violence and Incitement policy, while the other identifies potentially viral conten",
+        "score": 0.3757,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "40fe05e16f23d0e7",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": ", the Board took issue with Meta\u2019s selective application of its High-Risk label prior to a polarized election in Iraqi Kurdistan, further highlighting the confusion that the uneven labeling of misleading content can cause. The Board notes reporting observing inconsistency in the application of AI labels to content, even when industry-standard signals of AI g",
+        "score": 0.3716,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "bd52e21b6c6aa7c2",
+        "case_id": "FB-8O9SMRCJ",
+        "title": "Journalistic Video on Somalia\u2019s Future",
+        "url": "https://www.oversightboard.com/decision/fb-8o9smrcj/",
+        "excerpt": "A user appealed Meta\u2019s decision to remove a video featuring a clip of a news report about an international conference on Somalia. The clip includes a journalist asking questions to people in Somalia and footage of leaders and flags of the armed group al-Shabaab. After the Board brought the appeal to Meta\u2019s attention, the company reversed its original decisio",
+        "score": 0.3635,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "fcf9a1d87883659f",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "requires people to disclose, through its \u201cAI-disclosure tool,\u201d whenever users post \u201corganic content with photorealistic video or realistic-sounding audio that was digitally created or altered.\u201d Meta states it may apply penalties if users fail to do so. Meta applies three different informative labels for manipulated media: the \u201cHigh-Risk\u201d label, the \u201cAI Info\u201d",
+        "score": 0.3517,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "740bf2f9e6d7c62d",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "The Oversight Board has upheld Meta\u2019s decision to leave up a Facebook post that shared a manipulated video during a political crisis in the Philippines but notes that the content should have been labeled \u201cHigh-Risk\u201d because of the significant potential to deceive users on a matter of public importance. The Board recommends that Meta publicly explain its mani",
+        "score": 0.3508,
+        "source_type": "precedent"
+      }
+    ],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-LX3CUY5O",
+    "gold": "upheld",
+    "gold_policies": [
+      "Privacy violations and image privacy rights"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.5991979837417603,
+    "reasoning": "Meta action: left_up.",
+    "policies": [
+      "overturn"
+    ],
+    "citations": [],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-LX3CUY5O",
+    "gold": "upheld",
+    "gold_policies": [
+      "Privacy violations and image privacy rights"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.7751948237419128,
+    "reasoning": "Meta's decision should be upheld",
+    "policies": [
+      "Meta should uphold"
+    ],
+    "citations": [
+      {
+        "chunk_id": "2d11a06d92cc3d99",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "The Board finds that the four posts did not violate any of Meta's content policies, including its rules on Hateful Conduct, and should not have been removed. Even if they had been violating, this should have resulted in a single strike, which would not be a sufficient basis to unpublish the page. As Meta now concedes, no elements of the page were violating. ",
+        "score": 0.3421,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "d8d463d913c8e730",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "about 90,000 people, posting on sensitive political and social matters, the impact of these failures in quality control, mistake prevention and access to appeals are serious. They further exacerbate a hostile environment for speech marked by governmental repression and censorship, in a context where malicious reporting from state-affiliated actors is a signi",
+        "score": 0.3069,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "dcd8dd314069cc5b",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "The Board finds that the case content does not meet the criteria for removal under the Misinformation policy standard. It does not provide information about any of the prohibited categories under this policy line, including voting or census locations, voting processes, or voter or candidate eligibility. The Board also finds that the case content meets the el",
+        "score": 0.3043,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "bd457806aa16f7d2",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "part of a broader systemic disinformation campaign to influence public opinion about a particular political or social issue under heightened tensions, it is even more necessary to address viral misleading posts, especially when proliferation strategies quickly evolve to evade detection and review. In cases like this, Meta should apply all its relevant polici",
+        "score": 0.2989,
+        "source_type": "policy"
+      }
+    ],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-LX3CUY5O",
+    "gold": "upheld",
+    "gold_policies": [
+      "Privacy violations and image privacy rights"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.7024213075637817,
+    "reasoning": "Overturn Meta\u2019s original decision to remove the content",
+    "policies": [
+      "Overturn"
+    ],
+    "citations": [
+      {
+        "chunk_id": "2d11a06d92cc3d99",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "The Board finds that the four posts did not violate any of Meta's content policies, including its rules on Hateful Conduct, and should not have been removed. Even if they had been violating, this should have resulted in a single strike, which would not be a sufficient basis to unpublish the page. As Meta now concedes, no elements of the page were violating. ",
+        "score": 0.3421,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "d8d463d913c8e730",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "about 90,000 people, posting on sensitive political and social matters, the impact of these failures in quality control, mistake prevention and access to appeals are serious. They further exacerbate a hostile environment for speech marked by governmental repression and censorship, in a context where malicious reporting from state-affiliated actors is a signi",
+        "score": 0.3069,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "dcd8dd314069cc5b",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "The Board finds that the case content does not meet the criteria for removal under the Misinformation policy standard. It does not provide information about any of the prohibited categories under this policy line, including voting or census locations, voting processes, or voter or candidate eligibility. The Board also finds that the case content meets the el",
+        "score": 0.3043,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "bd457806aa16f7d2",
+        "case_id": "FB-V6Y3G1DV",
+        "title": "Protest Footage Paired With Pro-Duterte Chants",
+        "url": "https://www.oversightboard.com/decision/fb-v6y3g1dv/",
+        "excerpt": "part of a broader systemic disinformation campaign to influence public opinion about a particular political or social issue under heightened tensions, it is even more necessary to address viral misleading posts, especially when proliferation strategies quickly evolve to evade detection and review. In cases like this, Meta should apply all its relevant polici",
+        "score": 0.2989,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "32219973d84c6251",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "Summary The Oversight Board has found Meta\u2019s systems have failed to safeguard independent journalism and public interest reporting in the self-declared Republic of Somaliland. The Board analyzed the removal of a Facebook page and four pieces of content covering current affairs in Somaliland, a repressive region for journalists. The Board has overturned Meta\u2019",
+        "score": 0.3548,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "9b320cd61b488225",
+        "case_id": "FB-8O9SMRCJ",
+        "title": "Journalistic Video on Somalia\u2019s Future",
+        "url": "https://www.oversightboard.com/decision/fb-8o9smrcj/",
+        "excerpt": "The Board overturns Meta\u2019s original decision to remove the content. The Board acknowledges Meta\u2019s correction of its initial error once the Board brought the case to Meta\u2019s attention. Return to Case Decisions and Policy Advisory Opinions",
+        "score": 0.34,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "6c208682d8077eaa",
+        "case_id": "FB-8O9SMRCJ",
+        "title": "Journalistic Video on Somalia\u2019s Future",
+        "url": "https://www.oversightboard.com/decision/fb-8o9smrcj/",
+        "excerpt": "this case to Meta\u2019s attention, the company reversed its original decision. Meta determined that the content is a news report that questions the UK government\u2019s exclusion of al-Shabaab from a conference on the future of Somalia, given that al-Shabaab controls large parts of the country. Meta also mentioned that the footage of al-Shabaab's leaders and flags \u201ci",
+        "score": 0.3388,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "4a3f1ff46f13c86c",
+        "case_id": "FB-8O9SMRCJ",
+        "title": "Journalistic Video on Somalia\u2019s Future",
+        "url": "https://www.oversightboard.com/decision/fb-8o9smrcj/",
+        "excerpt": "Summary decisions examine cases in which Meta has reversed its original decision on a piece of content after the Board brought it to the company\u2019s attention and include information about Meta\u2019s acknowledged errors. They are approved by a Board Member panel, rather than the full Board, do not involve public comments and do not have precedential value for the ",
+        "score": 0.3384,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "f90d774fef12a50b",
+        "case_id": "BUN-9C46KKKS",
+        "title": "Reporting on Somaliland Current Affairs",
+        "url": "https://www.oversightboard.com/decision/bun-9c46kkks/",
+        "excerpt": "Journalists Syndicate, PC-31295). In this environment, Meta has a heightened responsibility to protect freedom of expression and ensure access to information. Given the severe consequences Meta\u2019s page unpublication decisions and content removals can have for journalists in this region, the company must be especially attentive to ensuring accurate enforcement",
+        "score": 0.3356,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "4106705980aa75ed",
+        "case_id": "BUN-9DUILXWR",
+        "title": "Graphic Content in Awareness-Raising Context",
+        "url": "https://www.oversightboard.com/decision/bun-9duilxwr/",
+        "excerpt": "who are naked, it darkens and becomes more obscure. The caption, translated from Spanish, reads \"Strong images\" followed by hashtags such as \"#fire\" and \"#news.\" In their appeal to the Board, the user stated they were \"informing the public about important issues.\" In the third case, a news organization posted a video that, in two different moments, features ",
+        "score": 0.333,
+        "source_type": "precedent"
+      }
+    ],
+    "model": "google/flan-t5-small",
+    "fallback_used": false
+  }
+]

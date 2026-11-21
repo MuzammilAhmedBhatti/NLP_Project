@@ -1,19 +1,22 @@
 """Local, server-rendered Casebook interface."""
-from pathlib import Path
-from uuid import uuid4
-from urllib.parse import quote
+
 from collections import OrderedDict
+from functools import lru_cache
+from pathlib import Path
+from urllib.parse import quote
+from uuid import uuid4
 
 import pandas as pd
 from fastapi import FastAPI, Form, HTTPException
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 
-from .app import _case_html, _decisions, _esc, APP_CSS
+from .app import APP_CSS, _case_html, _decisions, _esc
 from .cli import load_index
 from .models import PredictionRequest
 from .predictor import Predictor
 
 site = FastAPI()
+app_index = lru_cache(maxsize=1)(load_index)
 results = OrderedDict()
 css = """
 *{box-sizing:border-box}body{margin:0;color:#27331f;background:#faf4e8;font:17px/1.55 'Source Sans 3',system-ui,sans-serif}a{color:#36472b}a:focus-visible,button:focus-visible{outline:3px solid #8456c7;outline-offset:4px}
@@ -22,56 +25,124 @@ header,nav{display:flex;align-items:center;gap:1.5rem}header{padding:18px 5vw;bo
 @media(max-width:790px){.hero,.split,.shell{grid-template-columns:1fr}.hero{padding-top:45px}.art{min-height:290px}.rail{flex-direction:row;flex-wrap:wrap;padding:6px 12px}.well{margin-top:20px}header{flex-wrap:wrap;gap:8px}nav{gap:12px}}
 """
 
+
 def page(title, body, active=None):
-    links = [("/predict","New analysis"),("/precedents","Precedents"),("/evaluation","Evaluation")]
-    rail = "".join(f'<a href="{url}" '+('aria-current="page"' if active == url else '')+f'>{label}</a>' for url,label in links)
+    links = [
+        ("/predict", "New analysis"),
+        ("/precedents", "Precedents"),
+        ("/evaluation", "Evaluation"),
+    ]
+    rail = "".join(
+        f'<a href="{url}" ' + ('aria-current="page"' if active == url else "") + f">{label}</a>"
+        for url, label in links
+    )
     if active:
         body = f'<div class="shell"><nav class="rail">{rail}</nav><main class="work">{body}</main></div>'
-    return HTMLResponse(f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{_esc(title)} · ModPrecedent</title><style>{APP_CSS.splitlines()[1]}{css}</style><header><a class="brand" href="/">ModPrecedent</a><nav><a href="/precedents">Precedents</a><a href="/predict">Open workspace</a></nav></header>{body}</html>')
+    return HTMLResponse(
+        f'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{_esc(title)} · ModPrecedent</title><style>{APP_CSS.splitlines()[1]}{css}</style><header><a class="brand" href="/">ModPrecedent</a><nav><a href="/precedents">Precedents</a><a href="/predict">Open workspace</a></nav></header>{body}</html>'
+    )
+
 
 @site.get("/")
 def home():
-    return page("Home", """<main class="hero"><section><h1>Would you uphold the decision?</h1><p>Explore how the Oversight Board weighs a social media post, its context, and past decisions.</p><a class="cta" href="/predict">Analyze a post</a></section><div class="art" aria-hidden="true"><div class="folder"><small>OVERSIGHT BOARD</small><h2>Case file</h2><span>Post and context</span><span>Meta’s action</span><span>Related precedents</span></div></div></main>""")
+    return page(
+        "Home",
+        """<main class="hero"><section><h1>Would you uphold the decision?</h1><p>Explore how the Oversight Board weighs a social media post, its context, and past decisions.</p><a class="cta" href="/predict">Analyze a post</a></section><div class="art" aria-hidden="true"><div class="folder"><small>OVERSIGHT BOARD</small><h2>Case file</h2><span>Post and context</span><span>Meta’s action</span><span>Related precedents</span></div></div></main>""",
+    )
 
-def card(case_id,title,tag):
-    return f'<a class="card" href="/precedents/{quote(case_id,safe="")}"><span class="tag">{_esc(tag)}</span><h3>{_esc(title)}</h3></a>'
+
+def card(case_id, title, tag):
+    return f'<a class="card" href="/precedents/{quote(case_id, safe="")}"><span class="tag">{_esc(tag)}</span><h3>{_esc(title)}</h3></a>'
+
 
 @site.get("/predict")
 def workspace():
-    examples = "".join(card(d.case_id,d.title,d.decision_type) for d in _decisions()[:3])
-    return page("New analysis",'''<div class="split"><section><h1>Analyze a post</h1><p>Describe what someone scrolling their feed would see, including the caption and context.</p><form method="post" onsubmit="this.querySelector('button').textContent='Analyzing…';this.querySelector('button').disabled=true"><label for="post">Post and context</label><textarea id="post" name="post" minlength="15" required placeholder="What was shared, by whom, and with what context?"></textarea><div class="pair"><div><label for="action">Meta’s action</label><select id="action" name="action"><option value="removed">Removed the post</option><option value="left_up">Kept it up</option><option value="warning">Added a warning</option><option value="account_action">Restricted the account</option></select></div><div><label for="guess">Your guess</label><select name="guess" id="guess"><option value="">Skip guess</option><option value="upheld">Uphold</option><option value="overturned">Overturn</option></select></div></div><label for="method">Research method</label><select name="method" id="method"><option value="S2">Policy + precedent</option><option value="S1">Policy only</option><option value="S0">Closed book</option></select><button>Analyze post</button></form></section><aside class="well"><h2>From the library</h2>'''+examples+'</aside></div>',"/predict")
+    examples = "".join(card(d.case_id, d.title, d.decision_type) for d in _decisions()[:3])
+    return page(
+        "New analysis",
+        """<div class="split"><section><h1>Analyze a post</h1><p>Describe what someone scrolling their feed would see, including the caption and context.</p><form method="post" onsubmit="this.querySelector('button').textContent='Analyzing…';this.querySelector('button').disabled=true"><label for="post">Post and context</label><textarea id="post" name="post" minlength="15" required placeholder="What was shared, by whom, and with what context?"></textarea><div class="pair"><div><label for="action">Meta’s action</label><select id="action" name="action"><option value="removed">Removed the post</option><option value="left_up">Kept it up</option><option value="warning">Added a warning</option><option value="account_action">Restricted the account</option></select></div><div><label for="guess">Your guess</label><select name="guess" id="guess"><option value="">Skip guess</option><option value="upheld">Uphold</option><option value="overturned">Overturn</option></select></div></div><label for="method">Research method</label><select name="method" id="method"><option value="S2">Policy + precedent</option><option value="S1">Policy only</option><option value="S0">Closed book</option></select><button>Analyze post</button></form></section><aside class="well"><h2>From the library</h2>"""
+        + examples
+        + "</aside></div>",
+        "/predict",
+    )
+
 
 @site.post("/predict")
-def analyze(post:str=Form(...,min_length=15),action:str=Form(...),guess:str=Form(""),method:str=Form("S2")):
-    req = PredictionRequest(post_description=post,meta_action=action,user_guess=guess or None)
-    prediction = Predictor(load_index()).predict(req,method)
+def analyze(
+    post: str = Form(..., min_length=15),
+    action: str = Form(...),
+    guess: str = Form(""),
+    method: str = Form("S2"),
+):
+    req = PredictionRequest(post_description=post, meta_action=action, user_guess=guess or None)
+    prediction = Predictor(app_index()).predict(req, method)
     key = uuid4().hex
-    results[key] = (req,prediction)
-    if len(results)>128:
+    results[key] = (req, prediction)
+    if len(results) > 128:
         results.popitem(last=False)
-    return RedirectResponse("/results/"+key,303)
+    return RedirectResponse("/results/" + key, 303)
+
 
 @site.get("/results/{key}")
-def result(key:str):
+def result(key: str):
     if key not in results:
-        raise HTTPException(404,"Result expired. Start a new analysis.")
-    req,p=results[key]
-    evidence="".join(card(c.case_id,c.title,c.source_type)+f'<p>{_esc(c.excerpt)}</p>' for c in p.citations)
-    return page("Prediction",f'<div class="split"><article><small>{"Retrieval baseline" if p.fallback_used else _esc(p.model)}</small><h1>Likely {_esc(p.outcome)}</h1><p>Your guess · {_esc(req.user_guess or "Skipped")}</p><h2>Reasoning</h2><p>{_esc(p.reasoning)}</p><h2>Policy</h2><p>{_esc(", ".join(p.policies) or "No policy returned")}</p><details><summary>Original post</summary><p>{_esc(req.post_description)}</p></details></article><aside class="well"><h2>Retrieved evidence</h2>{evidence or "No passages retrieved."}</aside></div>',"/predict")
+        raise HTTPException(404, "Result expired. Start a new analysis.")
+    req, p = results[key]
+    evidence = "".join(
+        card(c.case_id, c.title, c.source_type) + f"<p>{_esc(c.excerpt)}</p>" for c in p.citations
+    )
+    return page(
+        "Prediction",
+        f'<div class="split"><article><small>{"Retrieval baseline" if p.fallback_used else _esc(p.model)}</small><h1>Likely {_esc(p.outcome)}</h1><p>Your guess · {_esc(req.user_guess or "Skipped")}</p><h2>Reasoning</h2><p>{_esc(p.reasoning)}</p><h2>Policy</h2><p>{_esc(", ".join(p.policies) or "No policy returned")}</p><details><summary>Original post</summary><p>{_esc(req.post_description)}</p></details></article><aside class="well"><h2>Retrieved evidence</h2>{evidence or "No passages retrieved."}</aside></div>',
+        "/predict",
+    )
+
 
 @site.get("/precedents")
-def library(q:str=""):
-    cards="".join(card(d.case_id,d.title,d.decision_type) for d in _decisions() if q.casefold() in " ".join([d.title,d.summary,*d.policies]).casefold())
-    return page("Precedents",f'<h1>Precedent library</h1><form><label for="q">Search by case or policy</label><input id="q" name="q" value="{_esc(q)}"><button>Search</button></form>{cards or "<p>No matching decisions.</p>"}',"/precedents")
+def library(q: str = ""):
+    cards = "".join(
+        card(d.case_id, d.title, d.decision_type)
+        for d in _decisions()
+        if q.casefold() in " ".join([d.title, d.summary, *d.policies]).casefold()
+    )
+    return page(
+        "Precedents",
+        f'<h1>Precedent library</h1><form><label for="q">Search by case or policy</label><input id="q" name="q" value="{_esc(q)}"><button>Search</button></form>{cards or "<p>No matching decisions.</p>"}',
+        "/precedents",
+    )
+
 
 @site.get("/precedents/{case_id}")
-def reader(case_id:str):
-    if not any(d.case_id==case_id for d in _decisions()):
-        raise HTTPException(404,"Case unavailable")
-    return page("Case detail",_case_html(case_id),"/precedents")
+def reader(case_id: str):
+    if not any(d.case_id == case_id for d in _decisions()):
+        raise HTTPException(404, "Case unavailable")
+    return page("Case detail", _case_html(case_id), "/precedents")
+
 
 @site.get("/evaluation")
 def evaluation():
-    path=Path("reports/generated/latest/metrics.csv")
-    body=pd.read_csv(path).to_html(index=False) if path.exists() else "<p>Results will appear here after approved cases have been evaluated.</p>"
-    return page("Evaluation",'<h1>Evaluation</h1><p>Compare closed-book, policy-only, and policy-plus-precedent predictions on reviewed cases.</p><div class="tablewrap">'+body+'</div>',"/evaluation")
+    path = Path("reports/generated/latest/metrics.csv")
+    body = (
+        pd.read_csv(path).to_html(index=False)
+        if path.exists()
+        else "<p>Results will appear here after approved cases have been evaluated.</p>"
+    )
+    if path.with_name("accuracy.svg").exists():
+        body += '<figure><img style="max-width:100%" src="/evaluation/accuracy.svg" alt="Outcome accuracy by system"><figcaption>Accuracy on three approved Standard decisions</figcaption></figure><a href="/evaluation/retrieval.csv">Download retrieval experiment results</a>'
+    return page(
+        "Evaluation",
+        '<h1>Evaluation</h1><p>Compare closed-book, policy-only, and policy-plus-precedent predictions on reviewed cases.</p><div class="tablewrap">'
+        + body
+        + "</div>",
+        "/evaluation",
+    )
+
+
+@site.get("/evaluation/{artifact}")
+def evaluation_artifact(artifact: str):
+    if artifact not in {"accuracy.svg", "retrieval.csv"}:
+        raise HTTPException(404)
+    path = Path("reports/generated/latest") / artifact
+    if not path.is_file():
+        raise HTTPException(404)
+    return FileResponse(path)

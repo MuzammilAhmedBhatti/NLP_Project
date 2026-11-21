@@ -19,6 +19,10 @@ Do not treat retrieved precedent outcomes as certain. Cite evidence using [chunk
 class Predictor:
     def __init__(self, index: HybridIndex | None = None, llm: OllamaClient | None = None):
         self.index = index
+        if llm is None and settings.llm_backend == "flan":
+            from .local_model import local_model
+
+            llm = local_model()
         self.llm = llm or OllamaClient(
             model=settings.ollama_model,
             url=settings.ollama_url,

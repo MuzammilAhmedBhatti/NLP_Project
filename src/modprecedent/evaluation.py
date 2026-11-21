@@ -41,6 +41,10 @@ def evaluate(
         for case in cases:
             request = PredictionRequest.model_validate(case["input"])
             prediction = predictor.predict(request, system)
+            if prediction.fallback_used:
+                raise ValueError(
+                    "Evaluation requires a working language model. Configure Ollama or MODPRECEDENT_LLM_BACKEND=flan."
+                )
             predictions.append(prediction)
             rows.append(
                 {
@@ -77,10 +81,32 @@ def candidate_from_decision(decision: Decision) -> dict | None:
     if decision.decision_type.lower() != "standard" or decision.outcome.value == "other":
         return None
     # Only case facts/summary enter the prompt; ruling-specific sections stay excluded.
+    curated = {
+        "IG-XLA2OKM2": (
+            "An Instagram user uses memes and film clips to describe side effects from prescription medications during pregnancy and confusion after clinically administered fentanyl during labor.",
+            "removed",
+            "overturned",
+        ),
+        "FB-46USUH23": (
+            "During the Israel-Iran conflict, a Facebook page presents footage of damaged buildings as live reporting from Haifa. Users question its authenticity. A fact-checker identified a similar clip as AI-generated. The post carries no AI label.",
+            "left_up",
+            "overturned",
+        ),
+        "FB-LX3CUY5O": (
+            "A German news agency shares a photograph from a political protest. An activist tore up his own passport at a press event, and the published image shows the identifying information on its biodata page.",
+            "left_up",
+            "upheld",
+        ),
+    }
     description = decision.summary.split("The Oversight Board")[0].strip()
+    if decision.case_id in curated:
+        description, meta_action, outcome = curated[decision.case_id]
+    elif decision.meta_action in {"removed", "left_up", "warning", "account_action"}:
+        meta_action, outcome = decision.meta_action, decision.outcome.value
+    else:
+        return None
     if len(description) < 80:
         return None
-    meta_action = "removed" if "remove" in decision.summary[:500].lower() else "left_up"
     return {
         "case_id": decision.case_id,
         "source_url": str(decision.url),
@@ -89,7 +115,7 @@ def candidate_from_decision(decision: Decision) -> dict | None:
             "meta_action": meta_action,
             "as_of_date": decision.published_date.isoformat() if decision.published_date else None,
         },
-        "outcome": decision.outcome.value,
+        "outcome": outcome,
         "policies": decision.policies,
         "status": "pending_review",
     }

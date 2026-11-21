@@ -1,6 +1,6 @@
 .PHONY: install collect process index test evaluate candidates run
 install:
-	python -m pip install -e ".[dev]"
+	python -m pip install -e ".[frontend,rag,dev]"
 collect:
 	python -m modprecedent.cli collect --max-pages 5
 process:
@@ -10,7 +10,7 @@ index:
 test:
 	python -m pytest
 evaluate:
-	python -m modprecedent.cli evaluate --dataset data/evaluation/approved_cases.jsonl
+	python -m modprecedent.experiments
 candidates:
 	python -m modprecedent.cli candidates
 run:
