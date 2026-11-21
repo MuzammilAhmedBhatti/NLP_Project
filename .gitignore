@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/sample_decisions.jsonl
+!data/processed/decisions.jsonl
+data/index/*
+!data/index/.gitkeep
+reports/generated/*
+!reports/generated/.gitkeep
+.env
+

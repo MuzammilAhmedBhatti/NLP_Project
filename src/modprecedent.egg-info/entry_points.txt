@@ -1,0 +1,3 @@
+[console_scripts]
+modprecedent = modprecedent.cli:main
+modprecedent-app = modprecedent.app:main

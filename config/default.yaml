@@ -1,0 +1,21 @@
+data:
+  listing_url: https://www.oversightboard.com/decision/
+  request_delay_seconds: 0.7
+  max_pages: 10
+retrieval:
+  backend: auto
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  chunk_size: 900
+  chunk_overlap: 120
+  top_k_policy: 4
+  top_k_precedent: 6
+  rerank: true
+llm:
+  backend: ollama
+  model: llama3.1:8b
+  temperature: 0.0
+evaluation:
+  seed: 42
+  standard_only: true
+  temporal_split: true
+
