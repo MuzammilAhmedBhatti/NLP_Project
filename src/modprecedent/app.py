@@ -396,7 +396,9 @@ def build_app() -> gr.Blocks:
 
 
 def main() -> None:
-    build_app().queue(default_concurrency_limit=2).launch(css=APP_CSS, theme=gr.themes.Base())
+    import uvicorn
+
+    uvicorn.run("modprecedent.web:site", host="127.0.0.1", port=7860)
 
 
 if __name__ == "__main__":
