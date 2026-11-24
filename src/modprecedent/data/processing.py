@@ -11,11 +11,13 @@ POLICY_HINTS = ("community standard", "content policy", "policy", "rule")
 
 
 def clean_text(text: str) -> str:
+    """Normalize whitespace and page noise before indexing."""
     text = text.replace("\u00a0", " ").replace("\u200b", "")
     return re.sub(r"[ \t]+", " ", re.sub(r"\n{3,}", "\n\n", text)).strip()
 
 
 def split_sections(text: str) -> dict[str, str]:
+    """Split a decision into named sections for source-aware retrieval."""
     matches = list(SECTION_RE.finditer(text))
     if not matches:
         return {"Decision": clean_text(text)}
@@ -30,6 +32,7 @@ def split_sections(text: str) -> dict[str, str]:
 
 
 def sliding_chunks(text: str, size: int = 900, overlap: int = 120) -> Iterable[str]:
+    """Create overlapping text chunks without cutting words arbitrarily."""
     words = text.split()
     if not words:
         return
@@ -45,6 +48,7 @@ def sliding_chunks(text: str, size: int = 900, overlap: int = 120) -> Iterable[s
 
 
 def decision_to_chunks(decision: Decision, size: int = 900, overlap: int = 120) -> list[Chunk]:
+    """Convert a normalized decision into metadata-rich retrieval chunks."""
     sections = decision.sections or split_sections(decision.full_text)
     chunks: list[Chunk] = []
     for section, body in sections.items():

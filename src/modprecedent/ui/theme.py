@@ -1,7 +1,19 @@
 """Shared Casebook controls, reading surfaces and motion."""
 
 STYLE = """
+.verdict-stage{display:grid;width:max-content;perspective:9em;margin:.13em 0 .2em}
+.verdict-face{grid-area:1/1;justify-self:start;padding:.02em .16em .11em;font:bold italic 1.05em/1 Georgia,serif;letter-spacing:-.065em;border:2px solid #34223d;border-radius:.12em;box-shadow:.055em .06em #34223d;backface-visibility:hidden;transform-origin:center}
+.verdict-face.uphold{background:#d4b4ff;color:#391952;transform:rotate(-3deg)}
+.verdict-face.overturn{background:#ff987e;color:#482018;opacity:0}
 @media(prefers-reduced-motion:no-preference){
+ .verdict-face{animation:verdictFlip 6s cubic-bezier(.32,.02,.21,1) infinite}
+ .verdict-face.overturn{animation-delay:-3s}
+ @keyframes verdictFlip{
+   0%,36%,100%{opacity:1;transform:rotateX(0) rotate(-3deg)}
+   46%{opacity:0;transform:translateY(-.18em) rotateX(95deg) rotate(4deg)}
+   50%,85%{opacity:0;transform:translateY(.24em) rotateX(-98deg) rotate(7deg)}
+   96%{opacity:1;transform:rotateX(8deg) rotate(-4deg)}
+ }
  .folder{animation:fileFloat 4.6s ease-in-out infinite alternate}
  .folder span{animation:paperMark 6s ease-in-out infinite;background:linear-gradient(90deg,#c6dba6,transparent) left center/0% 90% no-repeat}
  .folder span:nth-of-type(2){animation-delay:1.4s}.folder span:nth-of-type(3){animation-delay:2.8s}
@@ -16,9 +28,6 @@ STYLE = """
  .tablewrap img{animation:plotIn .65s ease-out}
  @keyframes plotIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
 }
-.motion-toggle{position:absolute;bottom:-2rem;right:8%;font:600 .85rem system-ui;padding:.35rem .85rem;border:1px solid #bbc3aa;background:#fffaf1;color:#34462f}
-.art:has(.motion-toggle[aria-pressed=true]) .folder,.art:has(.motion-toggle[aria-pressed=true]) span{animation-play-state:paused}
-@media(prefers-reduced-motion:reduce){.motion-toggle{display:none}}
 :root{--olive:#34462f;--ink:#243322;--peach:#ff947c;--iris:#ddd1ff;--line:#d8d7c8;--spring:cubic-bezier(.22,1.32,.36,1)}
 body{color:var(--ink);background:#faf7ee}header{background:#fffdf5;border-color:var(--line)}header nav a{text-decoration:none;font-weight:600;padding:.45rem .8rem;border-radius:2rem}header nav a:last-child{background:var(--olive);color:white}
 .brand{letter-spacing:-.055em}.brand:before{content:"";display:inline-block;width:.7em;height:.7em;margin-right:.4em;background:var(--peach);border-radius:3px;box-shadow:3px -3px var(--olive);transform:rotate(-9deg)}

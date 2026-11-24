@@ -7,16 +7,15 @@ from pathlib import Path
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
 
-from .evaluation import policy_f1, save_report
-from .io import read_jsonl
-from .local_model import local_model
-from .models import Decision, PredictionRequest
-from .predictor import Predictor
-from .processing import decision_to_chunks
-from .retrieval import HybridIndex
+from ..data.io import read_jsonl
+from ..data.models import Decision, PredictionRequest
+from ..data.processing import decision_to_chunks
+from ..rag import HybridIndex, Predictor
+from .metrics import policy_f1, save_report
 
 
 def run():
+    """Execute the leakage-aware S0, S1, and S2 evaluation experiment."""
     cases = [
         json.loads(s)
         for s in Path("data/evaluation/approved_cases.jsonl").read_text().splitlines()
@@ -27,19 +26,28 @@ def run():
     decisions = read_jsonl(Path("data/processed/decisions.jsonl"), Decision)
     heldout = {c["case_id"] for c in cases}
     rows, comparisons = [], []
-    llm = local_model()
+    llm = Predictor().llm
+    requests_by_case = {
+        case["case_id"]: PredictionRequest.model_validate(case["input"]) for case in cases
+    }
+    cutoff = min(request.as_of_date for request in requests_by_case.values())
+    prior = [
+        decision
+        for decision in decisions
+        if decision.case_id not in heldout
+        and decision.published_date
+        and decision.published_date < cutoff
+    ]
+    sensitivity_indexes = {}
+    for size, dense in [(480, False), (900, False), (900, True)]:
+        index = HybridIndex()
+        index.build([part for d in prior for part in decision_to_chunks(d, size)], dense=dense)
+        if dense and index.dense is None:
+            raise RuntimeError("Install the rag extra before running the experiment.")
+        sensitivity_indexes[(size, dense)] = index
     for c in cases:
-        req = PredictionRequest.model_validate(c["input"])
-        prior = [
-            d
-            for d in decisions
-            if d.case_id not in heldout and d.published_date and d.published_date < req.as_of_date
-        ]
-        for size, dense in [(480, False), (900, False), (900, True)]:
-            index = HybridIndex()
-            index.build([part for d in prior for part in decision_to_chunks(d, size)], dense=dense)
-            if dense and index.dense is None:
-                raise RuntimeError("Install the rag extra before running the experiment.")
+        req = requests_by_case[c["case_id"]]
+        for (size, dense), index in sensitivity_indexes.items():
             for diverse in [False, True]:
                 index.diversify = diverse
                 for k in [3, 6]:
@@ -57,7 +65,10 @@ def run():
                             ),
                         }
                     )
-        index.diversify = False
+    index = sensitivity_indexes[(900, True)]
+    index.diversify = False
+    for c in cases:
+        req = requests_by_case[c["case_id"]]
         for system in ("S0", "S1", "S2"):
             p = Predictor(index, llm).predict(req, system)
             if p.fallback_used:
@@ -77,7 +88,8 @@ def run():
         pred = [r["outcome"] for r in subset]
         cites = [
             (
-                set(re.findall(r"\[([0-9a-f]{16})\]", r["reasoning"])),
+                set(r.get("citation_ids", []))
+                | set(re.findall(r"\[([0-9a-f]{16})\]", r["reasoning"])),
                 {c["chunk_id"] for c in r["citations"]},
             )
             for r in subset
@@ -100,26 +112,29 @@ def run():
     frame = pd.DataFrame(metrics)
     save_report(frame, rows, out)
     pd.DataFrame(comparisons).to_csv(out / "retrieval.csv", index=False)
+    case_count = len(cases)
     bars = "".join(
         f'<text x="12" y="{36 + i * 46}">{r["system"]}</text><rect x="58" y="{19 + i * 46}" width="{300 * r["accuracy"]}" height="22" fill="#456544"/><text x="370" y="{36 + i * 46}">{r["accuracy"]:.0%}</text>'
         for i, r in enumerate(metrics)
     )
     (out / "accuracy.svg").write_text(
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="440" height="155"><title>Outcome accuracy on three approved cases</title>{bars}</svg>'
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="440" height="155"><title>Outcome accuracy on {case_count} approved cases</title>{bars}</svg>'
     )
     with (out / "report.md").open("a", encoding="utf8") as f:
         f.write(
-            "\n![Accuracy on three approved decisions](accuracy.svg)\n\nFLAN-T5-small, forced-choice decoding. Each fold excludes all reviewed cases and fits retrieval only on earlier dated documents. Three cases support a demonstration only. Citation coverage checks identifiable passage references, not evidentiary support. Retrieval sensitivity measures policy overlap and source diversity; the two chunk sizes also use different encoders.\n"
+            f"\n![Accuracy on {case_count} approved decisions](accuracy.svg)\n\nGenerator: {llm.model}. The retrieval corpus excludes every reviewed case and uses only documents earlier than the earliest test case. Citation coverage checks identifiable passage references, not evidentiary support. Retrieval sensitivity measures policy overlap and source diversity.\n"
         )
     summarize(out)
     print(frame.to_string(index=False))
 
 
 def summarize(out: Path):
+    """Summarize one evaluated system into report-ready metrics."""
     rows = json.loads((out / "predictions.json").read_text(encoding="utf8"))
     scores = pd.read_csv(out / "metrics.csv")
 
     def policies(row, key):
+        """Normalize a policy collection for evaluation."""
         return {value.strip().casefold() for value in row[key]}
 
     scores["policy_exact_accuracy"] = [
@@ -132,6 +147,8 @@ def summarize(out: Path):
         for system in scores["system"]
     ]
     scores.to_csv(out / "metrics.csv", index=False)
+    case_count = int(scores["n"].max())
+    corpus_size = len(read_jsonl(Path("data/processed/decisions.jsonl"), Decision))
     summary = (
         pd.read_csv(out / "retrieval.csv")
         .groupby(["backend", "chunk_size", "k", "rerank"], as_index=False)[
@@ -142,10 +159,12 @@ def summarize(out: Path):
     (out / "report.md").write_text(
         "# Approved Standard-decision study\n\n"
         + scores.to_markdown(index=False)
-        + "\n\n![Accuracy on three approved decisions](accuracy.svg)\n\n"
-        + "FLAN-T5-small scored two possible outcomes and generated a rationale and policy for each input. "
-        + "Each fold excluded all three test cases and used only earlier dated documents, including for TF-IDF fitting. "
-        + "Three examples give coarse accuracy steps of 33 percentage points. The scores do not establish generalization. "
+        + f"\n\n![Accuracy on {case_count} approved decisions](accuracy.svg)\n\n"
+        + f"Generator: `{rows[0]['model'] if rows else 'unknown'}`. Dense retriever: `sentence-transformers/all-MiniLM-L6-v2`. "
+        + f"The processed corpus contains {corpus_size} decisions and the human-approved review set contains {case_count} cases. "
+        + "The configured pretrained instruction model generated the outcome, rationale, policy labels and citation IDs. "
+        + f"The retrieval corpus excluded all {case_count} test cases and used only documents published before the earliest test case, including for TF-IDF fitting. "
+        + f"With {case_count} examples, accuracy changes in steps of {100 / case_count:.1f} percentage points. The scores do not establish generalization. "
         + "Inline citation coverage counts rationales containing a valid retrieved passage ID. It does not measure entailment. "
         + "Policy exact accuracy requires matching the complete normalized label set.\n\n"
         + "## Retrieval sensitivity\n\n"

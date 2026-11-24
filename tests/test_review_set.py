@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from modprecedent.models import PredictionRequest
+from modprecedent.data.models import PredictionRequest
 
 
 def test_reviewed_inputs_have_cutoffs_and_hide_rulings():

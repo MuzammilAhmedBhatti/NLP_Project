@@ -10,7 +10,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from .models import Chunk
+from ..data.models import Chunk
 
 
 @dataclass
@@ -23,6 +23,7 @@ class HybridIndex:
     """Portable TF-IDF index with optional dense Sentence Transformer retrieval."""
 
     def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
+        """Initialize the HybridIndex instance and its required dependencies."""
         self.model_name = model_name
         self.chunks: list[Chunk] = []
         self.vectorizer: TfidfVectorizer | None = None
@@ -32,6 +33,7 @@ class HybridIndex:
         self.diversify = False
 
     def build(self, chunks: list[Chunk], dense: bool = False) -> None:
+        """Fit lexical and dense retrieval representations for the supplied chunks."""
         self.chunks = chunks
         corpus = [f"{c.title} {' '.join(c.policies)} {c.section} {c.text}" for c in chunks]
         self.vectorizer = TfidfVectorizer(
@@ -57,6 +59,7 @@ class HybridIndex:
         before: date | None = None,
         exclude_case_id: str | None = None,
     ) -> list[Hit]:
+        """Return ranked hybrid retrieval results with optional source diversification."""
         if not self.chunks or self.vectorizer is None:
             return []
         sparse_scores = cosine_similarity(self.vectorizer.transform([query]), self.sparse)[0]
@@ -91,6 +94,7 @@ class HybridIndex:
         return [Hit(self.chunks[i], float(scores[i])) for i in ranked]
 
     def save(self, directory: Path) -> None:
+        """Persist the fitted retrieval index and its chunk metadata."""
         directory.mkdir(parents=True, exist_ok=True)
         joblib.dump(
             {"vectorizer": self.vectorizer, "sparse": self.sparse}, directory / "sparse.joblib"
@@ -108,6 +112,7 @@ class HybridIndex:
 
     @classmethod
     def load(cls, directory: Path) -> HybridIndex:
+        """Restore a previously persisted retrieval index."""
         metadata = json.loads((directory / "metadata.json").read_text(encoding="utf-8"))
         obj = cls(metadata["model_name"])
         stored = joblib.load(directory / "sparse.joblib")

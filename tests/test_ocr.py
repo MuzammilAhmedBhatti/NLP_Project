@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import pytest
 
-from modprecedent.ocr import OCRFailure, extract_text
+from modprecedent.ui.ocr import OCRFailure, extract_text
 
 
 def png_with_text(text: str) -> bytes:

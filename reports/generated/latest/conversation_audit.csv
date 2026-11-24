@@ -1,0 +1,23 @@
+question,expected_intent,predicted_intent,correct
+what should I change so it stays up?,poster_revision,poster_revision,True
+could I rewrite the caption?,poster_revision,poster_revision,True
+what did I do wrong?,poster_revision,poster_revision,True
+why was this upheld?,explanation,explanation,True
+explain this verdict,explanation,explanation,True
+is this hate speech?,policy,policy,True
+which rule applies?,policy,policy,True
+what is the closest case?,precedent,precedent,True
+where did you get this from?,precedent,precedent,True
+which source supports that?,precedent,precedent,True
+what if it was clearly satire?,counterfactual,counterfactual,True
+would a warning label change it?,counterfactual,counterfactual,True
+what do both cases have in common?,comparison,comparison,True
+compare this post with the precedent,comparison,comparison,True
+what type of posts are usually upheld?,outcome_patterns,outcome_patterns,True
+are removals often overturned?,outcome_patterns,outcome_patterns,True
+what does upheld mean?,definition,definition,True
+what is a citation?,definition,definition,True
+do you agree with the ruling?,critique,critique,True
+is this outcome fair?,critique,critique,True
+what did I ask before?,conversation_history,conversation_history,True
+recap our conversation,conversation_history,conversation_history,True

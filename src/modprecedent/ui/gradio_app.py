@@ -6,10 +6,10 @@ from pathlib import Path
 import gradio as gr
 import pandas as pd
 
-from .cli import decisions_path, load_index
-from .io import read_jsonl
-from .models import Decision, PredictionRequest
-from .predictor import Predictor
+from ..cli import decisions_path, load_index
+from ..data.io import read_jsonl
+from ..data.models import Decision, PredictionRequest
+from ..rag import Predictor
 
 APP_CSS = r"""
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Spectral:ital,wght@0,500;0,600;1,500&display=swap');
@@ -95,15 +95,18 @@ textarea, input, .wrap, select { background: #fffdf7 !important; border-color: #
 
 
 def _esc(value: object) -> str:
+    """Escape user-controlled text before inserting it into HTML."""
     return html.escape(str(value or ""))
 
 
 def _decisions() -> list[Decision]:
+    """Load and cache processed decisions for the case library."""
     processed = Path("data/processed/decisions.jsonl")
     return read_jsonl(processed if processed.exists() else decisions_path(), Decision)
 
 
 def _library_frame(decisions: list[Decision]) -> pd.DataFrame:
+    """Build the searchable case-library table."""
     return pd.DataFrame(
         [
             {
@@ -121,11 +124,13 @@ def _library_frame(decisions: list[Decision]) -> pd.DataFrame:
 
 
 def _page_updates(page: str):
+    """Create component updates for multipage navigation."""
     names = ("predict", "result", "library", "case", "evaluation")
     return tuple(gr.update(visible=name == page) for name in names)
 
 
 def _prediction_html(prediction, request: PredictionRequest) -> str:
+    """Render a prediction as safe result-page HTML."""
     outcome = prediction.outcome.title()
     guess = (request.user_guess or "No guess recorded").replace("_", " ").title()
     policies = "".join(
@@ -165,6 +170,7 @@ def _prediction_html(prediction, request: PredictionRequest) -> str:
 
 
 def _run_prediction(description: str, action: str, guess: str, system: str):
+    """Validate UI input and run the selected prediction system."""
     request = PredictionRequest(
         post_description=description,
         meta_action=action,
@@ -183,6 +189,7 @@ def _run_prediction(description: str, action: str, guess: str, system: str):
 
 
 def _filter_library(query: str, policy: str, outcome: str):
+    """Filter library records by search text, outcome, and policy."""
     decisions = _decisions()
     query_lower = query.strip().lower()
     filtered = []
@@ -204,6 +211,7 @@ def _filter_library(query: str, policy: str, outcome: str):
 
 
 def _case_html(case_id: str) -> str:
+    """Render one library decision as readable HTML."""
     decision = next((item for item in _decisions() if item.case_id == case_id), None)
     if decision is None:
         return '<div class="case-reader"><p>Select a precedent from the library.</p></div>'
@@ -232,10 +240,12 @@ def _case_html(case_id: str) -> str:
 
 
 def _open_case(case_id: str):
+    """Open the selected library row in the decision reader."""
     return (*_page_updates("case"), _case_html(case_id))
 
 
 def build_app() -> gr.Blocks:
+    """Construct the Gradio multipage application and event bindings."""
     decisions = _decisions()
     policies = sorted({policy for decision in decisions for policy in decision.policies})
     case_choices = [(decision.title, decision.case_id) for decision in decisions]
@@ -396,9 +406,10 @@ def build_app() -> gr.Blocks:
 
 
 def main() -> None:
+    """Run the command-line entry point for the selected workflow."""
     import uvicorn
 
-    uvicorn.run("modprecedent.web:site", host="127.0.0.1", port=7860)
+    uvicorn.run("modprecedent.ui.web:site", host="127.0.0.1", port=7860)
 
 
 if __name__ == "__main__":

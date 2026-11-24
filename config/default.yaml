@@ -11,8 +11,11 @@ retrieval:
   top_k_precedent: 6
   rerank: true
 llm:
-  backend: ollama
-  model: llama3.1:8b
+  backend: transformers
+  model: Qwen/Qwen2.5-1.5B-Instruct
+chat:
+  backend: transformers
+  model: Qwen/Qwen2.5-1.5B-Instruct
   temperature: 0.0
 evaluation:
   seed: 42

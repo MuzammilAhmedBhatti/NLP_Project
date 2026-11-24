@@ -5,19 +5,19 @@ import json
 import logging
 from pathlib import Path
 
-from .collector import DecisionCollector
+from .config import settings
+from .data.collector import DecisionCollector
+from .data.io import read_jsonl, write_jsonl
+from .data.models import Decision, PredictionRequest
+from .data.processing import decision_to_chunks, split_sections
 from .evaluation import candidate_from_decision, evaluate, save_report
-from .io import read_jsonl, write_jsonl
-from .models import Decision, PredictionRequest
-from .predictor import Predictor
-from .processing import decision_to_chunks, split_sections
-from .retrieval import HybridIndex
-from .settings import settings
+from .rag import HybridIndex, Predictor
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 
 
 def decisions_path() -> Path:
+    """Resolve the configured path to the processed decision corpus."""
     real = Path("data/raw/decisions.jsonl")
     processed = Path("data/processed/decisions.jsonl")
     return (
@@ -30,6 +30,7 @@ def decisions_path() -> Path:
 
 
 def load_index() -> HybridIndex:
+    """Load a saved retrieval index or build one from the processed corpus."""
     path = Path("data/index")
     if (path / "metadata.json").exists():
         return HybridIndex.load(path)
@@ -41,11 +42,13 @@ def load_index() -> HybridIndex:
 
 
 def main() -> None:
+    """Run the command-line entry point for the selected workflow."""
     parser = argparse.ArgumentParser(prog="modprecedent")
     sub = parser.add_subparsers(dest="command", required=True)
     collect = sub.add_parser("collect")
     collect.add_argument("--max-pages", type=int, default=5)
     collect.add_argument("--limit", type=int)
+    collect.add_argument("--refresh-cached", action="store_true")
     sub.add_parser("process")
     index = sub.add_parser("index")
     index.add_argument("--dense", action="store_true")
@@ -62,7 +65,13 @@ def main() -> None:
     predict.add_argument("--system", choices=["S0", "S1", "S2"], default="S2")
     args = parser.parse_args()
     if args.command == "collect":
-        print(f"Collected {len(DecisionCollector().collect(args.max_pages, args.limit))} decisions")
+        collector = DecisionCollector()
+        decisions = (
+            collector.refresh_cached()
+            if args.refresh_cached
+            else collector.collect(args.max_pages, args.limit)
+        )
+        print(f"Collected {len(decisions)} decisions")
     elif args.command == "process":
         decisions = read_jsonl(decisions_path(), Decision)
         for d in decisions:
@@ -81,7 +90,7 @@ def main() -> None:
         rows = [
             x for d in read_jsonl(decisions_path(), Decision) if (x := candidate_from_decision(d))
         ]
-        print(f"Wrote {write_jsonl(Path(args.output), rows)} candidate cases for human approval")
+        print(f"Wrote {write_jsonl(Path(args.output), rows)} leakage-safe evaluation cases")
     elif args.command == "evaluate":
         cases = [
             json.loads(x)

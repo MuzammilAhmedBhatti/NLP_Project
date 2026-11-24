@@ -70,5 +70,6 @@ class Prediction(BaseModel):
     reasoning: str
     policies: list[str] = Field(default_factory=list)
     citations: list[Citation] = Field(default_factory=list)
+    citation_ids: list[str] = Field(default_factory=list)
     model: str
     fallback_used: bool = False

@@ -1,7 +1,7 @@
 from datetime import date
 
-from modprecedent.models import Chunk
-from modprecedent.retrieval import HybridIndex
+from modprecedent.data.models import Chunk
+from modprecedent.rag import HybridIndex
 
 
 def chunk(cid, text, published="2020-01-01", source="precedent"):

@@ -6,11 +6,12 @@ from pathlib import Path
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score, precision_recall_fscore_support
 
-from .models import Decision, PredictionRequest
-from .predictor import Predictor
+from ..data.models import Decision, PredictionRequest
+from ..rag import Predictor
 
 
 def policy_f1(gold: list[list[str]], predicted: list[list[str]]) -> float:
+    """Compute multilabel policy F1 across evaluated cases."""
     scores = []
     for expected, actual in zip(gold, predicted, strict=True):
         e, a = {x.lower() for x in expected}, {x.lower() for x in actual}
@@ -21,6 +22,7 @@ def policy_f1(gold: list[list[str]], predicted: list[list[str]]) -> float:
 
 
 def citation_metrics(predictions) -> dict[str, float]:
+    """Measure whether generated citations reference retrieved evidence."""
     if not predictions:
         return {"citation_coverage": 0.0, "citation_relevance": 0.0}
     return {
@@ -35,6 +37,7 @@ def citation_metrics(predictions) -> dict[str, float]:
 def evaluate(
     predictor: Predictor, cases: list[dict], systems=("S0", "S1", "S2")
 ) -> tuple[pd.DataFrame, list[dict]]:
+    """Compute outcome, policy, and citation metrics for predictions."""
     metrics, rows = [], []
     for system in systems:
         predictions = []
@@ -43,7 +46,7 @@ def evaluate(
             prediction = predictor.predict(request, system)
             if prediction.fallback_used:
                 raise ValueError(
-                    "Evaluation requires a working language model. Configure Ollama or MODPRECEDENT_LLM_BACKEND=flan."
+                    "Evaluation requires a working language model. Install the pretrained-model dependencies or configure Ollama."
                 )
             predictions.append(prediction)
             rows.append(
@@ -78,6 +81,7 @@ def evaluate(
 
 
 def candidate_from_decision(decision: Decision) -> dict | None:
+    """Create an evaluation candidate from a normalized Board decision."""
     if decision.decision_type.lower() != "standard" or decision.outcome.value == "other":
         return None
     # Only case facts/summary enter the prompt; ruling-specific sections stay excluded.
@@ -97,14 +101,55 @@ def candidate_from_decision(decision: Decision) -> dict | None:
             "left_up",
             "upheld",
         ),
+        "FB-92IOQ88S": (
+            "A Facebook user posts an AI-generated video depicting a UK politician making derogatory statements about refugees. The video is presented as authentic political footage and the platform initially leaves it online.",
+            "left_up",
+            "overturned",
+        ),
+        "BUN-LJFRC0VQ": (
+            "Two Instagram users share eating-disorder awareness posts during an awareness campaign. The posts discuss recovery and direct viewers toward support resources, but Meta removes them under its self-injury and eating-disorders rules.",
+            "removed",
+            "overturned",
+        ),
+        "FB-O7AI7UAX": (
+            "A Facebook post uses an AI-manipulated video of a famous Brazilian footballer to promote an online game. The download link opens a different game, and the organic post remains online after a user reports it as a scam.",
+            "left_up",
+            "overturned",
+        ),
+        "TH-NC063KAD": (
+            "A Threads user replies to a news post about the Japanese prime minister and a tax scandal. The reply uses a Japanese expression translated as 'drop dead' alongside criticism and receives no likes before Meta removes it as a threat.",
+            "removed",
+            "overturned",
+        ),
+        "BUN-ZHSLVJO2": (
+            "Meta disables an account after repeated posts targeting public figures. The reviewed content includes hostile commentary, and the case concerns whether the accumulated violations justified an account-level penalty.",
+            "account_action",
+            "upheld",
+        ),
+        "FB-Q8WG6571": (
+            "A Facebook post alleges corruption involving the adult children of a politician. Meta leaves the post online, and the case concerns political criticism, the targets' public relevance and possible harassment.",
+            "left_up",
+            "upheld",
+        ),
+        "BUN-86TJ0RK5": (
+            "Three Facebook posts use the phrase 'From the River to the Sea' in content expressing solidarity with Palestinians. The posts contain no explicit call for violence or exclusion, and Meta leaves them online.",
+            "left_up",
+            "upheld",
+        ),
+        "BUN-IJ9KG9E9": (
+            "Two Facebook posts reproduce voting information attributed to the Australian Electoral Commission shortly before a referendum. Meta removes the posts under rules addressing election-related harm and misinformation.",
+            "removed",
+            "upheld",
+        ),
+        "IG-3R8RQIAQ": (
+            "An Instagram beautician posts a video showing make-up preparation for a 14-year-old girl's wedding. The caption promotes bridal services, and the conversation in the video presents marriage as more important than the child's education.",
+            "removed",
+            "upheld",
+        ),
     }
-    description = decision.summary.split("The Oversight Board")[0].strip()
-    if decision.case_id in curated:
-        description, meta_action, outcome = curated[decision.case_id]
-    elif decision.meta_action in {"removed", "left_up", "warning", "account_action"}:
-        meta_action, outcome = decision.meta_action, decision.outcome.value
-    else:
+    if decision.case_id not in curated:
         return None
+    description, meta_action, outcome = curated[decision.case_id]
     if len(description) < 80:
         return None
     return {
@@ -117,11 +162,12 @@ def candidate_from_decision(decision: Decision) -> dict | None:
         },
         "outcome": outcome,
         "policies": decision.policies,
-        "status": "pending_review",
+        "status": "approved",
     }
 
 
 def save_report(metrics: pd.DataFrame, rows: list[dict], directory: Path) -> None:
+    """Persist metrics, predictions, charts, and the Markdown evaluation report."""
     directory.mkdir(parents=True, exist_ok=True)
     metrics.to_csv(directory / "metrics.csv", index=False)
     (directory / "predictions.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")

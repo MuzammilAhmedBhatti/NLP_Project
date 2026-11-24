@@ -10,9 +10,9 @@ index:
 test:
 	python -m pytest
 evaluate:
-	python -m modprecedent.experiments
+	python -m modprecedent.evaluation.experiments
 candidates:
 	python -m modprecedent.cli candidates
 run:
-	python -m modprecedent.app
+	modprecedent-app
 

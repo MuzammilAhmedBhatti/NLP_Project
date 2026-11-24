@@ -11,6 +11,7 @@ T = TypeVar("T", bound=BaseModel)
 
 
 def write_jsonl(path: Path, rows: Iterable[BaseModel | dict]) -> int:
+    """Write model records as UTF-8 JSON Lines data."""
     path.parent.mkdir(parents=True, exist_ok=True)
     count = 0
     with path.open("w", encoding="utf-8") as handle:
@@ -22,6 +23,7 @@ def write_jsonl(path: Path, rows: Iterable[BaseModel | dict]) -> int:
 
 
 def read_jsonl(path: Path, model: type[T]) -> list[T]:
+    """Read UTF-8 JSON Lines data into validated model records."""
     if not path.exists():
         return []
     with path.open(encoding="utf-8") as handle:
