@@ -1,0 +1,8 @@
+retrieval:
+  backend: auto
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  chunk_size: 900
+  chunk_overlap: 120
+  top_k_policy: 4
+  top_k_precedent: 6
+  rerank: true
