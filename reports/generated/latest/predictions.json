@@ -1,0 +1,2250 @@
+[
+  {
+    "case_id": "FB-92IOQ88S",
+    "gold": "overturned",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Bullying and Harassment",
+      "Misinformation"
+    ],
+    "system": "S0",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The content does not align with any existing Meta policies regarding authenticity, accuracy, or ethical considerations for political videos.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-92IOQ88S",
+    "gold": "overturned",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Bullying and Harassment",
+      "Misinformation"
+    ],
+    "system": "S1",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "Meta clarified that the policy applies only when there is an escalation, and the content raises awareness about prisoners of war or condemns their treatment, thus violating the policy. [615bacaeae66d116]",
+    "policies": [
+      "Coordinating Harm and Promoting Crime"
+    ],
+    "citations": [
+      {
+        "chunk_id": "615bacaeae66d116",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "Dangerous Organizations and Individuals Community Standard The Board finds that the content in this case violates the Dangerous Organizations and Individuals policy because it supports a designated Tier 1 organization. Meta informed the Board that it removed the content in this case because it contained \u201csubstantive support\u201d for a Tier 1 terrorist organizati",
+        "score": 0.327,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "af1d6df7dd009292",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "guidelines provide a non-exhaustive list of examples of written or visual elements that show substantive support. This includes posts where \u201cthe content features, or claims to feature, a leader, spokesperson, or a known or self-proclaimed member of a designated entity speaking about the organization or its cause.\u201d On December 29, 2023, Meta updated the Dange",
+        "score": 0.3241,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "79c95fc20b5f4c12",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "The Board finds that the content also violates the Coordinating Harm and Promoting Crime Community Standard. Meta\u2019s policy prohibits exposing the identity of a prisoner of war during an armed conflict. According to Meta, this policy is enforced on escalation only and does not include an exception for content raising awareness about prisoners of war or condem",
+        "score": 0.313,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7fd9335234aa510e",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "have detained him as a \u201cforeign captive\u201d associated with the SAF, which is the main opponent of the RSF in Sudan\u2019s ongoing conflict. Therefore, the content violates the policy and should be removed. 8.2 Compliance With Meta\u2019s Human Rights Responsibilities",
+        "score": 0.3128,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "615bacaeae66d116"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-92IOQ88S",
+    "gold": "overturned",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Bullying and Harassment",
+      "Misinformation"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta's policy prohibits exposing the identity of a prisoner of war during an armed conflict, which aligns with the content's intent to promote crime and harm. [615bacaeae66d116]",
+    "policies": [
+      "Coordinating Harm and Promoting Crime"
+    ],
+    "citations": [
+      {
+        "chunk_id": "615bacaeae66d116",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "Dangerous Organizations and Individuals Community Standard The Board finds that the content in this case violates the Dangerous Organizations and Individuals policy because it supports a designated Tier 1 organization. Meta informed the Board that it removed the content in this case because it contained \u201csubstantive support\u201d for a Tier 1 terrorist organizati",
+        "score": 0.327,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "af1d6df7dd009292",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "guidelines provide a non-exhaustive list of examples of written or visual elements that show substantive support. This includes posts where \u201cthe content features, or claims to feature, a leader, spokesperson, or a known or self-proclaimed member of a designated entity speaking about the organization or its cause.\u201d On December 29, 2023, Meta updated the Dange",
+        "score": 0.3241,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "79c95fc20b5f4c12",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "The Board finds that the content also violates the Coordinating Harm and Promoting Crime Community Standard. Meta\u2019s policy prohibits exposing the identity of a prisoner of war during an armed conflict. According to Meta, this policy is enforced on escalation only and does not include an exception for content raising awareness about prisoners of war or condem",
+        "score": 0.313,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7fd9335234aa510e",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "have detained him as a \u201cforeign captive\u201d associated with the SAF, which is the main opponent of the RSF in Sudan\u2019s ongoing conflict. Therefore, the content violates the policy and should be removed. 8.2 Compliance With Meta\u2019s Human Rights Responsibilities",
+        "score": 0.3128,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "00d47672d4641dcb",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "influence or control over parts of the country, civilians who rely on Facebook, including the RSF\u2019s communications channels, for critical security and humanitarian information, could be at greater risk through the restrictions placed on those communications channels. Additionally, the Board finds this content violates the Coordinating Harm and Promoting Crim",
+        "score": 0.3799,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "795d494efb337df2",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "on October 13, saying it had done so \u201cin order to prioritize the safety of those kidnapped by Hamas.\u201d The two pieces of content in these two cases were therefore removed for violating Meta\u2019s Dangerous Organizations and Individuals policy. Following this decision, many news outlets began broadcasting related footage and users also started posting similar cont",
+        "score": 0.365,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c6be5b7b9ad594d6",
+        "case_id": "FB-O78K5LG3",
+        "title": "Dehumanizing Comments About People in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-o78k5lg3/",
+        "excerpt": "Hate Speech policy, Meta prohibits content targeting a person or group of people on the basis of their protected characteristics, specifically mentioning comparisons to \u201csub humanity\u201d and including \u201csavages\u201d as an example. In this content, the reference to \u201cthe general public of Gaza\u201d is an implicit reference to Palestinians in Gaza, thus targeting the prote",
+        "score": 0.3609,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "e4f12bbcc53400b5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "In October 2023, a Facebook user uploaded two separate posts, one after the other, containing identical content featuring a video of a woman describing the rape of Israeli women committed by Hamas during the terrorist attacks on October 7. The caption contains a \u201ctrigger warning\u201d and the speaker in the video warns users about the graphic content. The video g",
+        "score": 0.3588,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.3577,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "b28eafa92f505ee1",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "policy, which prohibits content revealing the identity of a prisoner of war in an armed conflict; in this case, the person detained in the vehicle. The Board is concerned that Meta did not remove the content quickly enough, which could indicate there are broader issues of effective policy enforcement during armed conflicts. 2. Case Description and Background",
+        "score": 0.3496,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "615bacaeae66d116"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-XLA2OKM2",
+    "gold": "overturned",
+    "gold_policies": [
+      "Restricted Goods and Services"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The case does not involve a clear violation of any specific policy guidelines, such as those related to medical malpractice or adverse drug reactions.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-XLA2OKM2",
+    "gold": "overturned",
+    "gold_policies": [
+      "Restricted Goods and Services"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta proposed to apply the prohibition on praising designated dangerous individuals, but the new policy allows for content that refers to them neutrally or without glorifying them, thus balancing the intent of the original prohibition. [0a7a34eddede17a5]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2297,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c12bdd8c2d2b64ac",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "use of \u201cshaheed,\u201d and do not seem to diverge much in their intended outcomes. The two options appear closer still insofar as Meta has expanded the scope of the contextualized exceptions that it makes to its prohibition on praise (now, glorification) generally (see para. 8 above). As the Board understands, after asking Meta about differences in application an",
+        "score": 0.222,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "1bd4098e5d4b7565",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "10. Meta presented the following policy options for the Board to consider, prior to its replacement of the prohibition on \u201cpraise\u201d with a prohibition on \u201cglorification\u201d and \u201cunclear references\u201d: 1) Continue to remove all content that uses \u201cshaheed\u201d to refer to an individual designated as dangerous under the Dangerous Organizations and Individuals policy. 2) ",
+        "score": 0.2183,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "beb7a525333da31b",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "there is no signal of violence in the content. The signals, as proposed by Meta, are: a visual depiction of an armament; statement of intent or advocacy to use or carry an armament/weapon; reference to military language; reference to arson, looting or other destruction of property; reference to known real-world incidents of violence; and statements of intent",
+        "score": 0.2166,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "0a7a34eddede17a5"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-XLA2OKM2",
+    "gold": "overturned",
+    "gold_policies": [
+      "Restricted Goods and Services"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta proposed to apply the prohibition on praising designated dangerous individuals, but the new policy allows for content that refers to them neutrally or without glorifying them, thus balancing the intent of the original prohibition. [0a7a34eddede17a5]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2297,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c12bdd8c2d2b64ac",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "use of \u201cshaheed,\u201d and do not seem to diverge much in their intended outcomes. The two options appear closer still insofar as Meta has expanded the scope of the contextualized exceptions that it makes to its prohibition on praise (now, glorification) generally (see para. 8 above). As the Board understands, after asking Meta about differences in application an",
+        "score": 0.222,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "1bd4098e5d4b7565",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "10. Meta presented the following policy options for the Board to consider, prior to its replacement of the prohibition on \u201cpraise\u201d with a prohibition on \u201cglorification\u201d and \u201cunclear references\u201d: 1) Continue to remove all content that uses \u201cshaheed\u201d to refer to an individual designated as dangerous under the Dangerous Organizations and Individuals policy. 2) ",
+        "score": 0.2183,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "beb7a525333da31b",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "there is no signal of violence in the content. The signals, as proposed by Meta, are: a visual depiction of an armament; statement of intent or advocacy to use or carry an armament/weapon; reference to military language; reference to arson, looting or other destruction of property; reference to known real-world incidents of violence; and statements of intent",
+        "score": 0.2166,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c50fa980e99db541",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "users, in countries where Meta\u2019s platforms are zero-rated (meaning users do not pay data or other charges for mobile access to Meta\u2019s apps). Content labeled \u201cfalse\u201d and \u201caltered\u201d is covered by a warning screen that obscures the content, requiring the user to click through to see it. Content labeled \u201cpartly false\u201d and \u201cmissing context\u201d is not obscured. Meta t",
+        "score": 0.2647,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "06d10c0d46f2d082",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "29. Meta applies account-level and group-level penalties that impact the spread of misinformation. A profile, page or a group that posts content that is removed or is labeled \u201cfalse\u201d or \u201caltered\u201d under this policy will receive a strike and be removed from recommendations, will not be able to monetize , and pop-ups will begin to appear to visitors to the page",
+        "score": 0.2593,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "3ffed5bf2f890df5",
+        "case_id": "FB-57SPP63Y",
+        "title": "Reporting on Pakistani Parliament Speech",
+        "url": "https://www.oversightboard.com/decision/fb-57spp63y/",
+        "excerpt": "at para 46). Lack of clarity or precision can lead to inconsistent and arbitrary enforcement of the rules. Applied to Meta, users should be able to predict the consequences of posting content on Facebook and Instagram, and content reviewers should have clear guidance on their enforcement. The Board notes that the \u201cawareness raising\u201d exception described above",
+        "score": 0.2552,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "3c7ee606e5eff535",
+        "case_id": "BUN-9H1NN18U",
+        "title": "Negative Stereotypes of African Americans",
+        "url": "https://www.oversightboard.com/decision/bun-9h1nn18u/",
+        "excerpt": "been altered. This is contrasted against an image of a Black family having a meal in which the father and food on the table have the same colorful markings, implying these two elements were added through editing. The post reinforces the widespread negative stereotype about the lack of a father figure in Black families in the United States, which stems from a",
+        "score": 0.2522,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.2509,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "66043137f539e260",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "and 19% of Instagram users clicked on the \u201cSee Why\u201d prompt. This takes the user to a separate screen that provides information on why the content was rated and links to the fact-checker's article. 24. When a piece of content is labeled by fact-checkers, Meta will rank it lower in user feeds. The demotion strength applied to COVID-19 misinformation labeled \u201cf",
+        "score": 0.2455,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "0a7a34eddede17a5"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-LJFRC0VQ",
+    "gold": "overturned",
+    "gold_policies": [
+      "Suicide, Self-Injury and Eating Disorders"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The removal of the posts under the self-injury and eating-disorders rules is upheld as it does not violate any specific Meta policies related to these issues.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-LJFRC0VQ",
+    "gold": "overturned",
+    "gold_policies": [
+      "Suicide, Self-Injury and Eating Disorders"
+    ],
+    "system": "S1",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The retrieved evidence suggests that Meta should remove exceptions for private residential information when considering it publicly available, aligning with the most relevant Meta policy. [7f21ee423a8cfde8]",
+    "policies": [
+      "Dangerous Organizations and Individuals",
+      "Misinformation"
+    ],
+    "citations": [
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.3085,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2532,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "f14af88c5337c60f",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation about health during public health emergencies 10. Prompted by the COVID-19 pandemic and a surge of misinformation observed on its platforms, Meta began removing COVID-19 misinformation in January of 2020. Its policy, and the types of claims subject to removal, evolved over the following two-years and culminated in the current section on",
+        "score": 0.2468,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c12bdd8c2d2b64ac",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "use of \u201cshaheed,\u201d and do not seem to diverge much in their intended outcomes. The two options appear closer still insofar as Meta has expanded the scope of the contextualized exceptions that it makes to its prohibition on praise (now, glorification) generally (see para. 8 above). As the Board understands, after asking Meta about differences in application an",
+        "score": 0.2468,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "7f21ee423a8cfde8"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-LJFRC0VQ",
+    "gold": "overturned",
+    "gold_policies": [
+      "Suicide, Self-Injury and Eating Disorders"
+    ],
+    "system": "S2",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The retrieved evidence suggests that Meta should remove the exception for sharing private residential information when considered \"publicly available,\" aligning with the most relevant Meta policy. [7f21ee423a8cfde8]",
+    "policies": [
+      "Dangerous Organizations and Individuals",
+      "Misinformation"
+    ],
+    "citations": [
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.3085,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2532,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "f14af88c5337c60f",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation about health during public health emergencies 10. Prompted by the COVID-19 pandemic and a surge of misinformation observed on its platforms, Meta began removing COVID-19 misinformation in January of 2020. Its policy, and the types of claims subject to removal, evolved over the following two-years and culminated in the current section on",
+        "score": 0.2468,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c12bdd8c2d2b64ac",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "use of \u201cshaheed,\u201d and do not seem to diverge much in their intended outcomes. The two options appear closer still insofar as Meta has expanded the scope of the contextualized exceptions that it makes to its prohibition on praise (now, glorification) generally (see para. 8 above). As the Board understands, after asking Meta about differences in application an",
+        "score": 0.2468,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.3753,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "06d10c0d46f2d082",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "29. Meta applies account-level and group-level penalties that impact the spread of misinformation. A profile, page or a group that posts content that is removed or is labeled \u201cfalse\u201d or \u201caltered\u201d under this policy will receive a strike and be removed from recommendations, will not be able to monetize , and pop-ups will begin to appear to visitors to the page",
+        "score": 0.3726,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "66043137f539e260",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "and 19% of Instagram users clicked on the \u201cSee Why\u201d prompt. This takes the user to a separate screen that provides information on why the content was rated and links to the fact-checker's article. 24. When a piece of content is labeled by fact-checkers, Meta will rank it lower in user feeds. The demotion strength applied to COVID-19 misinformation labeled \u201cf",
+        "score": 0.3712,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c50fa980e99db541",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "users, in countries where Meta\u2019s platforms are zero-rated (meaning users do not pay data or other charges for mobile access to Meta\u2019s apps). Content labeled \u201cfalse\u201d and \u201caltered\u201d is covered by a warning screen that obscures the content, requiring the user to click through to see it. Content labeled \u201cpartly false\u201d and \u201cmissing context\u201d is not obscured. Meta t",
+        "score": 0.3609,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "3ffed5bf2f890df5",
+        "case_id": "FB-57SPP63Y",
+        "title": "Reporting on Pakistani Parliament Speech",
+        "url": "https://www.oversightboard.com/decision/fb-57spp63y/",
+        "excerpt": "at para 46). Lack of clarity or precision can lead to inconsistent and arbitrary enforcement of the rules. Applied to Meta, users should be able to predict the consequences of posting content on Facebook and Instagram, and content reviewers should have clear guidance on their enforcement. The Board notes that the \u201cawareness raising\u201d exception described above",
+        "score": 0.3549,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "795d494efb337df2",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "on October 13, saying it had done so \u201cin order to prioritize the safety of those kidnapped by Hamas.\u201d The two pieces of content in these two cases were therefore removed for violating Meta\u2019s Dangerous Organizations and Individuals policy. Following this decision, many news outlets began broadcasting related footage and users also started posting similar cont",
+        "score": 0.3456,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "7f21ee423a8cfde8"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-ZHSLVJO2",
+    "gold": "upheld",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Violence and Incitement",
+      "Adult Nudity and Sexual Activity",
+      "Bullying and Harassment"
+    ],
+    "system": "S0",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The review does not provide any specific Meta policy details that would allow for a determination of whether the accumulated violations justified an account-level penalty.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-ZHSLVJO2",
+    "gold": "upheld",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Violence and Incitement",
+      "Adult Nudity and Sexual Activity",
+      "Bullying and Harassment"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta's newsworthiness exception is inconsistent with its prohibition on praising designated dangerous individuals, requiring Meta to confirm that one of the exceptions applies before allowing such content. [0a7a34eddede17a5]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.3452,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.3281,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.3216,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c12bdd8c2d2b64ac",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "use of \u201cshaheed,\u201d and do not seem to diverge much in their intended outcomes. The two options appear closer still insofar as Meta has expanded the scope of the contextualized exceptions that it makes to its prohibition on praise (now, glorification) generally (see para. 8 above). As the Board understands, after asking Meta about differences in application an",
+        "score": 0.3185,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "0a7a34eddede17a5"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-ZHSLVJO2",
+    "gold": "upheld",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Violence and Incitement",
+      "Adult Nudity and Sexual Activity",
+      "Bullying and Harassment"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta's newsworthiness exception is inconsistent with its prohibition on praising designated dangerous individuals, requiring Meta to confirm that one of the exceptions applies before allowing such content. [0a7a34eddede17a5]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.3452,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.3281,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.3216,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c12bdd8c2d2b64ac",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "use of \u201cshaheed,\u201d and do not seem to diverge much in their intended outcomes. The two options appear closer still insofar as Meta has expanded the scope of the contextualized exceptions that it makes to its prohibition on praise (now, glorification) generally (see para. 8 above). As the Board understands, after asking Meta about differences in application an",
+        "score": 0.3185,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "06d10c0d46f2d082",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "29. Meta applies account-level and group-level penalties that impact the spread of misinformation. A profile, page or a group that posts content that is removed or is labeled \u201cfalse\u201d or \u201caltered\u201d under this policy will receive a strike and be removed from recommendations, will not be able to monetize , and pop-ups will begin to appear to visitors to the page",
+        "score": 0.4164,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "4d35b6d1ec72fa8a",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "harassment. This will prompt temporary account suspension. 13. Give users an opportunity to remove or edit private information within their content when it is removed for violating the Privacy Violations policy. If the user removes or edits the private residential information out of the content within a certain deadline, the temporary block on the content wo",
+        "score": 0.4037,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.3953,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "5c08a7f93f277612",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "100 reactions, 50 comments and 50 shares, while the person who posted the content has about 4,000 friends and 32,000 followers. Shortly after it was posted, other Facebook users reported the content, but these reports were not prioritized for human review and the post was kept up on the platform. One of these users appealed Meta\u2019s decision but the appeal was",
+        "score": 0.3835,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "f058379dd7878f20",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "64. While maintaining other restrictions under the Dangerous Organizations and Individuals policy may be justified, Meta must ensure these restrictions and any sanctions imposed for violations are proportionate. Meta has previously informed the Board that it always applies severe strikes for all violations of its Dangerous Organizations and Individuals polic",
+        "score": 0.3784,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c6be5b7b9ad594d6",
+        "case_id": "FB-O78K5LG3",
+        "title": "Dehumanizing Comments About People in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-o78k5lg3/",
+        "excerpt": "Hate Speech policy, Meta prohibits content targeting a person or group of people on the basis of their protected characteristics, specifically mentioning comparisons to \u201csub humanity\u201d and including \u201csavages\u201d as an example. In this content, the reference to \u201cthe general public of Gaza\u201d is an implicit reference to Palestinians in Gaza, thus targeting the prote",
+        "score": 0.3704,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "0a7a34eddede17a5"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-46USUH23",
+    "gold": "overturned",
+    "gold_policies": [
+      "Misinformation"
+    ],
+    "system": "S0",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The retrieved evidence is not sufficient to determine the authenticity of the Facebook page's content, making it difficult to assess whether it constitutes genuine AI-generated material.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-46USUH23",
+    "gold": "overturned",
+    "gold_policies": [
+      "Misinformation"
+    ],
+    "system": "S1",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The policy does not explicitly prohibit the sharing of private residential information, which could lead to overreach and potentially remove posts related to such topics. [ba505e27055f1120]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.2956,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "e2251016ae0d8105",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "The post describes the journalist\u2019s trip to Gaza , their encounters with Hamas members and local residents, as well as the experience of finding and interviewing al-Rantisi. The post contains four photographs, including of Al-Rantisi, the interviewer and masked Hamas militants. In their appeal to the Board, the user clarified that the intention of the post w",
+        "score": 0.2911,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.2905,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "db0445071691f483",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the same time, the Board underscores that Meta\u2019s policies in this area are global and their impact extends far beyond this conflict. While acknowledging the salience of recent events in Israel and Palestine, the Board\u2019s recommendations are also global and not limited to any particular context. In the Board\u2019s view, Meta\u2019s approach to moderating the word \u201cshah",
+        "score": 0.2836,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "ba505e27055f1120"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-46USUH23",
+    "gold": "overturned",
+    "gold_policies": [
+      "Misinformation"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta's policies in this area are global and not limited to any particular context. [ba505e27055f1120]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.2956,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "e2251016ae0d8105",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "The post describes the journalist\u2019s trip to Gaza , their encounters with Hamas members and local residents, as well as the experience of finding and interviewing al-Rantisi. The post contains four photographs, including of Al-Rantisi, the interviewer and masked Hamas militants. In their appeal to the Board, the user clarified that the intention of the post w",
+        "score": 0.2911,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.2905,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "db0445071691f483",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the same time, the Board underscores that Meta\u2019s policies in this area are global and their impact extends far beyond this conflict. While acknowledging the salience of recent events in Israel and Palestine, the Board\u2019s recommendations are also global and not limited to any particular context. In the Board\u2019s view, Meta\u2019s approach to moderating the word \u201cshah",
+        "score": 0.2836,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "795d494efb337df2",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "on October 13, saying it had done so \u201cin order to prioritize the safety of those kidnapped by Hamas.\u201d The two pieces of content in these two cases were therefore removed for violating Meta\u2019s Dangerous Organizations and Individuals policy. Following this decision, many news outlets began broadcasting related footage and users also started posting similar cont",
+        "score": 0.4102,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "43ee4014f633e7b0",
+        "case_id": "FB-8RTRZY6Q",
+        "title": "Washington Post Article on Israel-Palestine",
+        "url": "https://www.oversightboard.com/decision/fb-8rtrzy6q/",
+        "excerpt": "A user appealed Meta\u2019s decision to remove a Facebook post with a link to a Washington Post article that addressed the chronology of the Israeli-Palestinian conflict. After the Board brought the appeal to Meta\u2019s attention, the company reversed its original decision and restored the post.",
+        "score": 0.4046,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "b434448f4e900b1f",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "A user appealed Meta\u2019s decisions to remove two Facebook posts that describe sexual violence carried out by Hamas militants during the October 7, 2023, terrorist attacks on Israel. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored the posts.",
+        "score": 0.4045,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "23e0692edea18856",
+        "case_id": "FB-8RTRZY6Q",
+        "title": "Washington Post Article on Israel-Palestine",
+        "url": "https://www.oversightboard.com/decision/fb-8rtrzy6q/",
+        "excerpt": "A user appealed Meta\u2019s decision to remove a Facebook post with a link to a Washington Post article that addressed the chronology of the Israeli-Palestinian conflict. After the Board brought the appeal to Meta\u2019s attention, the company reversed its original decision and restored the post.",
+        "score": 0.3987,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "8bd75246839c2bb5",
+        "case_id": "FB-8RTRZY6Q",
+        "title": "Washington Post Article on Israel-Palestine",
+        "url": "https://www.oversightboard.com/decision/fb-8rtrzy6q/",
+        "excerpt": "Dangerous Organizations and Individuals policy , which prohibits representation of and certain speech about the groups and people the company judges as linked to significant real-world harm. In their appeal to the Board, the user emphasized that the post was intended to report on the current Israel-Hamas conflict and was not meant to provide support for Hama",
+        "score": 0.3973,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.395,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "ba505e27055f1120"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-LX3CUY5O",
+    "gold": "upheld",
+    "gold_policies": [
+      "Privacy Violations"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The photo was shared by a German news agency without any restrictions on sharing the information, which aligns with the principle of shareability in the Meta action.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-LX3CUY5O",
+    "gold": "upheld",
+    "gold_policies": [
+      "Privacy Violations"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta informed the Board that it removed the content in this case because it contained \"substantive support\" for a Tier 1 terrorist organization. [615bacaeae66d116]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "615bacaeae66d116",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "Dangerous Organizations and Individuals Community Standard The Board finds that the content in this case violates the Dangerous Organizations and Individuals policy because it supports a designated Tier 1 organization. Meta informed the Board that it removed the content in this case because it contained \u201csubstantive support\u201d for a Tier 1 terrorist organizati",
+        "score": 0.3094,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.2789,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "5c3425def743c96e",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "to assess the impact of Meta\u2019s Dangerous Organizations and Individuals Community Standard on freedom of expression and political participation, especially during elections when designated entities or persons associated with them may be active in political discourse. The cases fall under the Board\u2019s strategic priorities of Elections and Civic Space and Hate S",
+        "score": 0.2744,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "3234263c06d4fb58",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": ". Transparency on government requests to review and/or remove content under Meta\u2019s Misinformation Community Standard would demonstrate this commitment. 110.",
+        "score": 0.2685,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "615bacaeae66d116"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-LX3CUY5O",
+    "gold": "upheld",
+    "gold_policies": [
+      "Privacy Violations"
+    ],
+    "system": "S2",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The content contains \"substantive support\" for a Tier 1 terrorist organization, which violates the Dangerous Organizations and Individuals policy. [615bacaeae66d116]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "615bacaeae66d116",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "Dangerous Organizations and Individuals Community Standard The Board finds that the content in this case violates the Dangerous Organizations and Individuals policy because it supports a designated Tier 1 organization. Meta informed the Board that it removed the content in this case because it contained \u201csubstantive support\u201d for a Tier 1 terrorist organizati",
+        "score": 0.3094,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.2789,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "5c3425def743c96e",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "to assess the impact of Meta\u2019s Dangerous Organizations and Individuals Community Standard on freedom of expression and political participation, especially during elections when designated entities or persons associated with them may be active in political discourse. The cases fall under the Board\u2019s strategic priorities of Elections and Civic Space and Hate S",
+        "score": 0.2744,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "3234263c06d4fb58",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": ". Transparency on government requests to review and/or remove content under Meta\u2019s Misinformation Community Standard would demonstrate this commitment. 110.",
+        "score": 0.2685,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "69557114aed5e00a",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "1. Decision Summary The Oversight Board overturns Meta\u2019s original decision to leave up a video that shows armed men, who describe themselves as Rapid Support Forces (RSF) members, detaining a person in the back of a military vehicle. The RSF members describe the captive, whose face can be seen clearly, as a foreign national associated with the Sudanese Armed",
+        "score": 0.3193,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "acff63363edc8d20",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "This is a summary decision . Summary decisions examine cases in which Meta has reversed its original decision on a piece of content after the Board brought it to the company\u2019s attention and include information about Meta\u2019s acknowledged errors. They are approved by a Board Member panel, rather than the full Board , do not involve public comments and do not ha",
+        "score": 0.3137,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "04bab00280da4521",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "50. The Board is especially concerned that Meta\u2019s approach impacts journalism and civic discourse. Those effects are acute in locations where violence by terrorist or other designated organizations is more prevalent, and in places where designated entities have territorial control or otherwise hold political power. Various public comments raised these concer",
+        "score": 0.313,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "77e6976096911cfb",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "A journalist appealed Meta\u2019s decision to remove a Facebook post recounting his personal experience of interviewing Abdel Aziz Al-Rantisi, a co-founder of Hamas. This case highlights a recurring issue in the over-enforcement of the company\u2019s Dangerous Organizations and Individuals policy, specifically regarding neutral posts. After the Board brought the appea",
+        "score": 0.3124,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "5ea721a109fa0c22",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "The Board finds that removing the content in this case is necessary and proportionate. Prohibiting content that directly quotes a self-proclaimed member of a designated organization, involved in widespread violence against civilians, when there is no caption condemning, neutrally discussing or indicating the post is part of news reporting, is necessary. In t",
+        "score": 0.3117,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "795d494efb337df2",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "on October 13, saying it had done so \u201cin order to prioritize the safety of those kidnapped by Hamas.\u201d The two pieces of content in these two cases were therefore removed for violating Meta\u2019s Dangerous Organizations and Individuals policy. Following this decision, many news outlets began broadcasting related footage and users also started posting similar cont",
+        "score": 0.3091,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "615bacaeae66d116"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-Q8WG6571",
+    "gold": "upheld",
+    "gold_policies": [
+      "Violence and Incitement",
+      "Bullying and Harassment"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The case involves political criticism, the targets' public relevance, and potential harassment, which aligns with the criteria for leaving up a Facebook post.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-Q8WG6571",
+    "gold": "upheld",
+    "gold_policies": [
+      "Violence and Incitement",
+      "Bullying and Harassment"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta's newsworthiness exception was consistently applied, ensuring that its new content policy remained compliant with the updated policy guidelines. [5c3425def743c96e]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "5c3425def743c96e",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "to assess the impact of Meta\u2019s Dangerous Organizations and Individuals Community Standard on freedom of expression and political participation, especially during elections when designated entities or persons associated with them may be active in political discourse. The cases fall under the Board\u2019s strategic priorities of Elections and Civic Space and Hate S",
+        "score": 0.3288,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "8da7622605e7e873",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "\u201csupports the party Spartans,\u201d explicitly highlighting that Mr. Kasidiaris, a designated individual, had endorsed the user\u2019s political party. For Meta, this user publicly aligned themselves with Mr. Kasidiaris by promoting the latter\u2019s endorsement. Meta informed the Board that following the December 2023 update to the Dangerous Organizations and Individuals ",
+        "score": 0.3223,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.3044,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "d251d90b5f93a5e4",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the options presented by Meta, it also considered others and took the December 2023 policy changes into account. In addition, given that Meta\u2019s request directly asked the Board for policy recommendations to address similar challenges in the future, the Board assessed connected issues relating to Meta\u2019s enforcement and transparency practices in areas evident ",
+        "score": 0.3024,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "5c3425def743c96e"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-Q8WG6571",
+    "gold": "upheld",
+    "gold_policies": [
+      "Violence and Incitement",
+      "Bullying and Harassment"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta's newsworthiness exception was consistently applied, ensuring that its new content policy remained compliant with the board's strategic priorities. [5c3425def743c96e]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "5c3425def743c96e",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "to assess the impact of Meta\u2019s Dangerous Organizations and Individuals Community Standard on freedom of expression and political participation, especially during elections when designated entities or persons associated with them may be active in political discourse. The cases fall under the Board\u2019s strategic priorities of Elections and Civic Space and Hate S",
+        "score": 0.3288,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "8da7622605e7e873",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "\u201csupports the party Spartans,\u201d explicitly highlighting that Mr. Kasidiaris, a designated individual, had endorsed the user\u2019s political party. For Meta, this user publicly aligned themselves with Mr. Kasidiaris by promoting the latter\u2019s endorsement. Meta informed the Board that following the December 2023 update to the Dangerous Organizations and Individuals ",
+        "score": 0.3223,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.3044,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "d251d90b5f93a5e4",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the options presented by Meta, it also considered others and took the December 2023 policy changes into account. In addition, given that Meta\u2019s request directly asked the Board for policy recommendations to address similar challenges in the future, the Board assessed connected issues relating to Meta\u2019s enforcement and transparency practices in areas evident ",
+        "score": 0.3024,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.4077,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c4dd36559e16cedc",
+        "case_id": "FB-0NLIR3FZ",
+        "title": "Political Korean Poem",
+        "url": "https://www.oversightboard.com/decision/fb-0nlir3fz/",
+        "excerpt": "This is a summary decision . Summary decisions examine cases in which Meta has reversed its original decision on a piece of content after the Board brought it to the company\u2019s attention and include information about Meta\u2019s acknowledged errors. They are approved by a Board Member panel, rather than the full Board, do not involve public comments and do not hav",
+        "score": 0.383,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "642395f494dad8d2",
+        "case_id": "BUN-9H1NN18U",
+        "title": "Negative Stereotypes of African Americans",
+        "url": "https://www.oversightboard.com/decision/bun-9h1nn18u/",
+        "excerpt": "Board Authority and Scope The Board has authority to review Meta\u2019s decision following an appeal from the user who reported content that was left up (Charter Article 2, Section 1; Bylaws Article 3, Section 1). When Meta acknowledges that it made an error and reverses its decision on a case under consideration for Board review, the Board may select that case f",
+        "score": 0.3729,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "5c08a7f93f277612",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "100 reactions, 50 comments and 50 shares, while the person who posted the content has about 4,000 friends and 32,000 followers. Shortly after it was posted, other Facebook users reported the content, but these reports were not prioritized for human review and the post was kept up on the platform. One of these users appealed Meta\u2019s decision but the appeal was",
+        "score": 0.3689,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "b7a3024e05ce1f15",
+        "case_id": "FB-57SPP63Y",
+        "title": "Reporting on Pakistani Parliament Speech",
+        "url": "https://www.oversightboard.com/decision/fb-57spp63y/",
+        "excerpt": "Violence and Incitement policy. As the account that shared the content was part of Meta\u2019s cross-check program, the post was marked for an additional level of review. Ultimately, Meta\u2019s policy and subject matter experts found the post to be non-violating. Meta referred the case to the Board because it represents tensions in its values of voice and safety when",
+        "score": 0.3659,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "8bd75246839c2bb5",
+        "case_id": "FB-8RTRZY6Q",
+        "title": "Washington Post Article on Israel-Palestine",
+        "url": "https://www.oversightboard.com/decision/fb-8rtrzy6q/",
+        "excerpt": "Dangerous Organizations and Individuals policy , which prohibits representation of and certain speech about the groups and people the company judges as linked to significant real-world harm. In their appeal to the Board, the user emphasized that the post was intended to report on the current Israel-Hamas conflict and was not meant to provide support for Hama",
+        "score": 0.3634,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "5c3425def743c96e"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-86TJ0RK5",
+    "gold": "upheld",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Violence and Incitement",
+      "Dangerous Organizations and Individuals",
+      "Violent and Graphic Content"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The posts do not explicitly call for violence or exclude anyone, which aligns with the Meta's stance of leaving content online without any explicit calls for such actions.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-86TJ0RK5",
+    "gold": "upheld",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Violence and Incitement",
+      "Dangerous Organizations and Individuals",
+      "Violent and Graphic Content"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The revised policy guidelines explicitly prohibit the removal of posts containing \"glorification, support and representation of Tier 1 entities,\" which aligns with the Board's concerns regarding the disproportionate impact of Meta's policies [db0445071691f483]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "db0445071691f483",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the same time, the Board underscores that Meta\u2019s policies in this area are global and their impact extends far beyond this conflict. While acknowledging the salience of recent events in Israel and Palestine, the Board\u2019s recommendations are also global and not limited to any particular context. In the Board\u2019s view, Meta\u2019s approach to moderating the word \u201cshah",
+        "score": 0.3325,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "8792099932285226",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": ". Israel quickly initiated a military campaign in response to the attacks. That military campaign had killed more than 30,000 people in Gaza as of March 4 (UN Office for the Coordination of Humanitarian Affairs, drawing on data from the Ministry of Health in Gaza). Reports from January indicated that 70% of fatalities were estimated to be women and children.",
+        "score": 0.2838,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "af1d6df7dd009292",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "guidelines provide a non-exhaustive list of examples of written or visual elements that show substantive support. This includes posts where \u201cthe content features, or claims to feature, a leader, spokesperson, or a known or self-proclaimed member of a designated entity speaking about the organization or its cause.\u201d On December 29, 2023, Meta updated the Dange",
+        "score": 0.2827,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "6bc18971585f2c58",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "to equality and non-discrimination among affected groups. In response to the Board\u2019s questions following the October 2023, Hamas-led attacks on Israel and the ensuing conflict, Meta confirmed that these events did not change its analysis of the scalability of the options initially presented in its request. In the Board\u2019s view, the proposed recommendations, b",
+        "score": 0.2803,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "db0445071691f483"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-86TJ0RK5",
+    "gold": "upheld",
+    "gold_policies": [
+      "Hateful Conduct",
+      "Violence and Incitement",
+      "Dangerous Organizations and Individuals",
+      "Violent and Graphic Content"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The revised policy guidelines explicitly prohibit the removal of posts containing \"glorification, support and representation of Tier 1 entities,\" which aligns with the Board's concerns regarding the disproportionate impact of Meta's policies [db0445071691f483]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "db0445071691f483",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the same time, the Board underscores that Meta\u2019s policies in this area are global and their impact extends far beyond this conflict. While acknowledging the salience of recent events in Israel and Palestine, the Board\u2019s recommendations are also global and not limited to any particular context. In the Board\u2019s view, Meta\u2019s approach to moderating the word \u201cshah",
+        "score": 0.3325,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "8792099932285226",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": ". Israel quickly initiated a military campaign in response to the attacks. That military campaign had killed more than 30,000 people in Gaza as of March 4 (UN Office for the Coordination of Humanitarian Affairs, drawing on data from the Ministry of Health in Gaza). Reports from January indicated that 70% of fatalities were estimated to be women and children.",
+        "score": 0.2838,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "af1d6df7dd009292",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "guidelines provide a non-exhaustive list of examples of written or visual elements that show substantive support. This includes posts where \u201cthe content features, or claims to feature, a leader, spokesperson, or a known or self-proclaimed member of a designated entity speaking about the organization or its cause.\u201d On December 29, 2023, Meta updated the Dange",
+        "score": 0.2827,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "6bc18971585f2c58",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "to equality and non-discrimination among affected groups. In response to the Board\u2019s questions following the October 2023, Hamas-led attacks on Israel and the ensuing conflict, Meta confirmed that these events did not change its analysis of the scalability of the options initially presented in its request. In the Board\u2019s view, the proposed recommendations, b",
+        "score": 0.2803,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "b434448f4e900b1f",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "A user appealed Meta\u2019s decisions to remove two Facebook posts that describe sexual violence carried out by Hamas militants during the October 7, 2023, terrorist attacks on Israel. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored the posts.",
+        "score": 0.3935,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.382,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "4693a929abf3aec3",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "A user appealed Meta\u2019s decisions to remove two Facebook posts that describe sexual violence carried out by Hamas militants during the October 7, 2023, terrorist attacks on Israel. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored the posts. 2 cases included in this bundle",
+        "score": 0.3759,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c7d93ec5c30afcc0",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "discourse context is explicitly mentioned in the content so there is no ambiguity [about] the intent of the user\u201d in this case.",
+        "score": 0.3648,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "8bd75246839c2bb5",
+        "case_id": "FB-8RTRZY6Q",
+        "title": "Washington Post Article on Israel-Palestine",
+        "url": "https://www.oversightboard.com/decision/fb-8rtrzy6q/",
+        "excerpt": "Dangerous Organizations and Individuals policy , which prohibits representation of and certain speech about the groups and people the company judges as linked to significant real-world harm. In their appeal to the Board, the user emphasized that the post was intended to report on the current Israel-Hamas conflict and was not meant to provide support for Hama",
+        "score": 0.3618,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "9ca4ce22d88e7e97",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "uses of \u201cshaheed\u201d are also relevant in that context. 45. Following the October 2023, Hamas-led terrorist attacks on Israel and ensuing Israeli military action in Gaza, the Board commissioned additional research into content trends around use of \u201cshaheed.\u201d Out of more than 12,000 public posts reviewed in this analysis, only two were supportive of Hamas. Nearl",
+        "score": 0.3588,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "db0445071691f483"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-IJ9KG9E9",
+    "gold": "upheld",
+    "gold_policies": [
+      "Coordinating Harm and Promoting Crime",
+      "Misinformation"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The removal of the posts is based on rules addressing election-related harm and misinformation, which aligns with the Meta action guidelines provided.",
+    "policies": [
+      "Misinformation"
+    ],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-IJ9KG9E9",
+    "gold": "upheld",
+    "gold_policies": [
+      "Coordinating Harm and Promoting Crime",
+      "Misinformation"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta explains in its request that under the Corporate Human Rights Policy, Meta should continue removing certain content on COVID-19 under this policy. [f14af88c5337c60f]",
+    "policies": [
+      "Misinformation"
+    ],
+    "citations": [
+      {
+        "chunk_id": "f14af88c5337c60f",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation about health during public health emergencies 10. Prompted by the COVID-19 pandemic and a surge of misinformation observed on its platforms, Meta began removing COVID-19 misinformation in January of 2020. Its policy, and the types of claims subject to removal, evolved over the following two-years and culminated in the current section on",
+        "score": 0.2902,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "3234263c06d4fb58",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": ". Transparency on government requests to review and/or remove content under Meta\u2019s Misinformation Community Standard would demonstrate this commitment. 110.",
+        "score": 0.29,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "5c3425def743c96e",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "to assess the impact of Meta\u2019s Dangerous Organizations and Individuals Community Standard on freedom of expression and political participation, especially during elections when designated entities or persons associated with them may be active in political discourse. The cases fall under the Board\u2019s strategic priorities of Elections and Civic Space and Hate S",
+        "score": 0.2837,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "f76655b69104b73a",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation Community Standard. Meta sent the Board a request for this policy advisory opinion in July 2022, asking the Board whether it should continue removing certain content on COVID-19 under this policy or whether a less restrictive approach would better align with the company\u2019s values and human rights responsibilities. 2. Meta explained in its reque",
+        "score": 0.2795,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "f14af88c5337c60f"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "BUN-IJ9KG9E9",
+    "gold": "upheld",
+    "gold_policies": [
+      "Coordinating Harm and Promoting Crime",
+      "Misinformation"
+    ],
+    "system": "S2",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The user appealed Meta\u2019s decisions to remove the posts, which were found not to violate their policies after the Board brought the appeals to Meta\u2019s attention. [f14af88c5337c60f]",
+    "policies": [
+      "Misinformation"
+    ],
+    "citations": [
+      {
+        "chunk_id": "f14af88c5337c60f",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation about health during public health emergencies 10. Prompted by the COVID-19 pandemic and a surge of misinformation observed on its platforms, Meta began removing COVID-19 misinformation in January of 2020. Its policy, and the types of claims subject to removal, evolved over the following two-years and culminated in the current section on",
+        "score": 0.2902,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "3234263c06d4fb58",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": ". Transparency on government requests to review and/or remove content under Meta\u2019s Misinformation Community Standard would demonstrate this commitment. 110.",
+        "score": 0.29,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "5c3425def743c96e",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "to assess the impact of Meta\u2019s Dangerous Organizations and Individuals Community Standard on freedom of expression and political participation, especially during elections when designated entities or persons associated with them may be active in political discourse. The cases fall under the Board\u2019s strategic priorities of Elections and Civic Space and Hate S",
+        "score": 0.2837,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "f76655b69104b73a",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation Community Standard. Meta sent the Board a request for this policy advisory opinion in July 2022, asking the Board whether it should continue removing certain content on COVID-19 under this policy or whether a less restrictive approach would better align with the company\u2019s values and human rights responsibilities. 2. Meta explained in its reque",
+        "score": 0.2795,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.4143,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "b434448f4e900b1f",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "A user appealed Meta\u2019s decisions to remove two Facebook posts that describe sexual violence carried out by Hamas militants during the October 7, 2023, terrorist attacks on Israel. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored the posts.",
+        "score": 0.3833,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c7d93ec5c30afcc0",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "discourse context is explicitly mentioned in the content so there is no ambiguity [about] the intent of the user\u201d in this case.",
+        "score": 0.3678,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "4693a929abf3aec3",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "A user appealed Meta\u2019s decisions to remove two Facebook posts that describe sexual violence carried out by Hamas militants during the October 7, 2023, terrorist attacks on Israel. After the Board brought the appeals to Meta\u2019s attention, the company reversed its original decisions and restored the posts. 2 cases included in this bundle",
+        "score": 0.3631,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "4185fdc57f54ac5e",
+        "case_id": "FB-57SPP63Y",
+        "title": "Reporting on Pakistani Parliament Speech",
+        "url": "https://www.oversightboard.com/decision/fb-57spp63y/",
+        "excerpt": "policy and the internal instructions for content moderators; processes for government requests for content to be reviewed; measures taken by Meta in light of the approaching election in 2024; and measures to protect politicians and candidates as well as channels of communications that Meta has established with the Pakistani government. Meta answered all the ",
+        "score": 0.3477,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "04fa104ff5d77219",
+        "case_id": "BUN-KJ6LO858",
+        "title": "Greek 2023 Elections Campaign",
+        "url": "https://www.oversightboard.com/decision/bun-kj6lo858/",
+        "excerpt": "In reviewing two cases about Facebook content posted around the time of the June 2023 General Election in Greece, the Board has upheld Meta\u2019s removal of both posts. Both were removed for violating the company\u2019s Dangerous Organizations and Individuals policy. The first case involved an electoral leaflet that included a statement in which a lawful candidate al",
+        "score": 0.3465,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "f14af88c5337c60f"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-O7AI7UAX",
+    "gold": "overturned",
+    "gold_policies": [
+      "Fraud, Scams and Deceptive Practices"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The use of an AI-manipulated video for promotion is considered manipulative and deceptive, which could be grounds for upholding the Meta Action.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-O7AI7UAX",
+    "gold": "overturned",
+    "gold_policies": [
+      "Fraud, Scams and Deceptive Practices"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The content in this case supports a designated Tier 1 organization, which violates the Dangerous Organizations and Individuals policy. [7f21ee423a8cfde8]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.2766,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "e75d1eee9b1466f5",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "from the Board on the sharing of private residential addresses and images, and the contexts in which this information may be published on Facebook and Instagram. Meta considers this to be a difficult question as while access to such information can be relevant to journalism and civic activism, \u201cexposing this information without consent can create a risk to r",
+        "score": 0.2589,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "615bacaeae66d116",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "Dangerous Organizations and Individuals Community Standard The Board finds that the content in this case violates the Dangerous Organizations and Individuals policy because it supports a designated Tier 1 organization. Meta informed the Board that it removed the content in this case because it contained \u201csubstantive support\u201d for a Tier 1 terrorist organizati",
+        "score": 0.2403,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7fd9335234aa510e",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "have detained him as a \u201cforeign captive\u201d associated with the SAF, which is the main opponent of the RSF in Sudan\u2019s ongoing conflict. Therefore, the content violates the policy and should be removed. 8.2 Compliance With Meta\u2019s Human Rights Responsibilities",
+        "score": 0.2377,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "7f21ee423a8cfde8"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "FB-O7AI7UAX",
+    "gold": "overturned",
+    "gold_policies": [
+      "Fraud, Scams and Deceptive Practices"
+    ],
+    "system": "S2",
+    "outcome": "overturned",
+    "confidence": 0.65,
+    "reasoning": "The content in these cases supports a designated Tier 1 organization, which violates the Dangerous Organizations and Individuals policy. [7f21ee423a8cfde8]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.2766,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "e75d1eee9b1466f5",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "from the Board on the sharing of private residential addresses and images, and the contexts in which this information may be published on Facebook and Instagram. Meta considers this to be a difficult question as while access to such information can be relevant to journalism and civic activism, \u201cexposing this information without consent can create a risk to r",
+        "score": 0.2589,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "615bacaeae66d116",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "Dangerous Organizations and Individuals Community Standard The Board finds that the content in this case violates the Dangerous Organizations and Individuals policy because it supports a designated Tier 1 organization. Meta informed the Board that it removed the content in this case because it contained \u201csubstantive support\u201d for a Tier 1 terrorist organizati",
+        "score": 0.2403,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "7fd9335234aa510e",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "have detained him as a \u201cforeign captive\u201d associated with the SAF, which is the main opponent of the RSF in Sudan\u2019s ongoing conflict. Therefore, the content violates the policy and should be removed. 8.2 Compliance With Meta\u2019s Human Rights Responsibilities",
+        "score": 0.2377,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.3914,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "5c08a7f93f277612",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "100 reactions, 50 comments and 50 shares, while the person who posted the content has about 4,000 friends and 32,000 followers. Shortly after it was posted, other Facebook users reported the content, but these reports were not prioritized for human review and the post was kept up on the platform. One of these users appealed Meta\u2019s decision but the appeal was",
+        "score": 0.3561,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "82ad0f4a13c6dfc0",
+        "case_id": "PAO-NR730OFI",
+        "title": "Meta\u2019s cross-check program",
+        "url": "https://www.oversightboard.com/decision/pao-nr730ofi/",
+        "excerpt": "The Board recognizes that the volume and complexity of content posted on Facebook and Instagram pose challenges for building systems that uphold Meta\u2019s human rights commitments. However, in its current form, cross-check is flawed in key areas which the company must address:",
+        "score": 0.3469,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "799ae2e9d493fdf1",
+        "case_id": "FB-14UY7PVN",
+        "title": "Sudan\u2019s Rapid Support Forces Video Captive",
+        "url": "https://www.oversightboard.com/decision/fb-14uy7pvn/",
+        "excerpt": "human review and the content left up. One of the users appealed but this report was closed because of Meta\u2019s COVID-19 automation policies. The same user then appealed to the Oversight Board. After the Board brought the case to Meta\u2019s attention, the company removed the Facebook post under its Dangerous Organizations and Individuals Community Standard, also ap",
+        "score": 0.3346,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c50fa980e99db541",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "users, in countries where Meta\u2019s platforms are zero-rated (meaning users do not pay data or other charges for mobile access to Meta\u2019s apps). Content labeled \u201cfalse\u201d and \u201caltered\u201d is covered by a warning screen that obscures the content, requiring the user to click through to see it. Content labeled \u201cpartly false\u201d and \u201cmissing context\u201d is not obscured. Meta t",
+        "score": 0.3345,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "8bd75246839c2bb5",
+        "case_id": "FB-8RTRZY6Q",
+        "title": "Washington Post Article on Israel-Palestine",
+        "url": "https://www.oversightboard.com/decision/fb-8rtrzy6q/",
+        "excerpt": "Dangerous Organizations and Individuals policy , which prohibits representation of and certain speech about the groups and people the company judges as linked to significant real-world harm. In their appeal to the Board, the user emphasized that the post was intended to report on the current Israel-Hamas conflict and was not meant to provide support for Hama",
+        "score": 0.3299,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "7f21ee423a8cfde8"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-3R8RQIAQ",
+    "gold": "upheld",
+    "gold_policies": [
+      "Child Sexual Exploitation, Abuse and Nudity",
+      "Human Exploitation"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The content does not involve any specific laws or regulations related to social media platforms or beauty services, making it unclear how the ruling would be applied.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-3R8RQIAQ",
+    "gold": "upheld",
+    "gold_policies": [
+      "Child Sexual Exploitation, Abuse and Nudity",
+      "Human Exploitation"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The policy advisory opinion provided by Meta indicates that it will continue to remove all content that uses \"shaheed\" to refer to an individual designated as dangerous under the Dangerous Organizations and Individuals policy. [7f21ee423a8cfde8]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.1749,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "e75d1eee9b1466f5",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "from the Board on the sharing of private residential addresses and images, and the contexts in which this information may be published on Facebook and Instagram. Meta considers this to be a difficult question as while access to such information can be relevant to journalism and civic activism, \u201cexposing this information without consent can create a risk to r",
+        "score": 0.1613,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.153,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "1bd4098e5d4b7565",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "10. Meta presented the following policy options for the Board to consider, prior to its replacement of the prohibition on \u201cpraise\u201d with a prohibition on \u201cglorification\u201d and \u201cunclear references\u201d: 1) Continue to remove all content that uses \u201cshaheed\u201d to refer to an individual designated as dangerous under the Dangerous Organizations and Individuals policy. 2) ",
+        "score": 0.153,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "7f21ee423a8cfde8"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "IG-3R8RQIAQ",
+    "gold": "upheld",
+    "gold_policies": [
+      "Child Sexual Exploitation, Abuse and Nudity",
+      "Human Exploitation"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The policy advisory opinion provided by Meta indicates that it will continue to remove all content that uses \"shaheed\" to refer to an individual designated as dangerous under the Dangerous Organizations and Individuals policy. [7f21ee423a8cfde8]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "7f21ee423a8cfde8",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "1. Remove the exception that allows the sharing of private residential information when considered \u201cpublicly available.\u201d This means Meta would no longer allow otherwise violating content on Facebook and Instagram if it has been \u201cpublished by at least five news outlets\u201d or if it contains residential addresses or imagery from financial records or statements of",
+        "score": 0.1749,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "e75d1eee9b1466f5",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "from the Board on the sharing of private residential addresses and images, and the contexts in which this information may be published on Facebook and Instagram. Meta considers this to be a difficult question as while access to such information can be relevant to journalism and civic activism, \u201cexposing this information without consent can create a risk to r",
+        "score": 0.1613,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.153,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "1bd4098e5d4b7565",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "10. Meta presented the following policy options for the Board to consider, prior to its replacement of the prohibition on \u201cpraise\u201d with a prohibition on \u201cglorification\u201d and \u201cunclear references\u201d: 1) Continue to remove all content that uses \u201cshaheed\u201d to refer to an individual designated as dangerous under the Dangerous Organizations and Individuals policy. 2) ",
+        "score": 0.153,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "c7587902ab825727",
+        "case_id": "PAO-NR730OFI",
+        "title": "Meta\u2019s cross-check program",
+        "url": "https://www.oversightboard.com/decision/pao-nr730ofi/",
+        "excerpt": "To comply with Meta\u2019s human rights commitments and address these problems, a program that corrects the most high-impact errors on Facebook and Instagram should be structured substantially differently. The Board has made 32 recommendations in this area, many of which are summarized below. As Meta seeks to improve its content moderation for all users, it shoul",
+        "score": 0.2529,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "66043137f539e260",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "and 19% of Instagram users clicked on the \u201cSee Why\u201d prompt. This takes the user to a separate screen that provides information on why the content was rated and links to the fact-checker's article. 24. When a piece of content is labeled by fact-checkers, Meta will rank it lower in user feeds. The demotion strength applied to COVID-19 misinformation labeled \u201cf",
+        "score": 0.2284,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "642395f494dad8d2",
+        "case_id": "BUN-9H1NN18U",
+        "title": "Negative Stereotypes of African Americans",
+        "url": "https://www.oversightboard.com/decision/bun-9h1nn18u/",
+        "excerpt": "Board Authority and Scope The Board has authority to review Meta\u2019s decision following an appeal from the user who reported content that was left up (Charter Article 2, Section 1; Bylaws Article 3, Section 1). When Meta acknowledges that it made an error and reverses its decision on a case under consideration for Board review, the Board may select that case f",
+        "score": 0.2076,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "b8e6c8dc7c45e756",
+        "case_id": "2021-010-FB-UA",
+        "title": "Sharing private residential information",
+        "url": "https://www.oversightboard.com/decision/pao-2021-01/",
+        "excerpt": "needs to be disclosed, together with their residential information, or whether their photo and/or a more general description by inference would suffice. 9. Explain to users that it enforces the Facebook Community Standards on Instagram, with several specific exceptions, and include a link to the Facebook Privacy Violations Community Standard in the language ",
+        "score": 0.1965,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "82ad0f4a13c6dfc0",
+        "case_id": "PAO-NR730OFI",
+        "title": "Meta\u2019s cross-check program",
+        "url": "https://www.oversightboard.com/decision/pao-nr730ofi/",
+        "excerpt": "The Board recognizes that the volume and complexity of content posted on Facebook and Instagram pose challenges for building systems that uphold Meta\u2019s human rights commitments. However, in its current form, cross-check is flawed in key areas which the company must address:",
+        "score": 0.1893,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "83851f66bb5e4102",
+        "case_id": "BUN-SF915ISW",
+        "title": "Thai Hostage Negotiator Interview",
+        "url": "https://www.oversightboard.com/decision/bun-sf915isw/",
+        "excerpt": "The Board has authority to review Meta\u2019s decision following an appeal from the user whose content was removed (Charter Article 2, Section 1; Bylaws Article 3, Section 1). When Meta acknowledges it made an error and reverses its decision on a case under consideration for Board review, the Board may select that case for a summary decision (Bylaws Article 2, Se",
+        "score": 0.1883,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "7f21ee423a8cfde8"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "TH-NC063KAD",
+    "gold": "overturned",
+    "gold_policies": [
+      "Violence and Incitement",
+      "Bullying and Harassment"
+    ],
+    "system": "S0",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The content is not a Meta Action but rather a response to a news post, which does not qualify as a Meta Action under the given policy.",
+    "policies": [],
+    "citations": [],
+    "citation_ids": [],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "TH-NC063KAD",
+    "gold": "overturned",
+    "gold_policies": [
+      "Violence and Incitement",
+      "Bullying and Harassment"
+    ],
+    "system": "S1",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "The revised policy in the December 2023 changes incorporates the principle of clarifying intent through ambiguous or unclear references, aligning with the Board's recommendation to apply the policy in a way [db0445071691f483]",
+    "policies": [
+      "Dangerous Organizations and Individuals"
+    ],
+    "citations": [
+      {
+        "chunk_id": "db0445071691f483",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the same time, the Board underscores that Meta\u2019s policies in this area are global and their impact extends far beyond this conflict. While acknowledging the salience of recent events in Israel and Palestine, the Board\u2019s recommendations are also global and not limited to any particular context. In the Board\u2019s view, Meta\u2019s approach to moderating the word \u201cshah",
+        "score": 0.3291,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.2985,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "f14af88c5337c60f",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation about health during public health emergencies 10. Prompted by the COVID-19 pandemic and a surge of misinformation observed on its platforms, Meta began removing COVID-19 misinformation in January of 2020. Its policy, and the types of claims subject to removal, evolved over the following two-years and culminated in the current section on",
+        "score": 0.2788,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2757,
+        "source_type": "policy"
+      }
+    ],
+    "citation_ids": [
+      "db0445071691f483"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  },
+  {
+    "case_id": "TH-NC063KAD",
+    "gold": "overturned",
+    "gold_policies": [
+      "Violence and Incitement",
+      "Bullying and Harassment"
+    ],
+    "system": "S2",
+    "outcome": "upheld",
+    "confidence": 0.65,
+    "reasoning": "Meta\u2019s proposed options, including the policy change incorporating ambiguity and unclear intent, were considered and deemed appropriate by the Board. [db0445071691f483]",
+    "policies": [
+      "Misinformation"
+    ],
+    "citations": [
+      {
+        "chunk_id": "db0445071691f483",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "the same time, the Board underscores that Meta\u2019s policies in this area are global and their impact extends far beyond this conflict. While acknowledging the salience of recent events in Israel and Palestine, the Board\u2019s recommendations are also global and not limited to any particular context. In the Board\u2019s view, Meta\u2019s approach to moderating the word \u201cshah",
+        "score": 0.3291,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "ba505e27055f1120",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "policy option, the Board notes that even when references to designated individuals are made alongside these signals of violence, they may still not intend to glorify those individuals or their acts. In its request (at pages 9 \u2013 10), Meta explains the potential for over-enforcement, referencing media reporting practices in Pakistan. In the Board\u2019s view, it wo",
+        "score": 0.2985,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "f14af88c5337c60f",
+        "case_id": "2022-003-IG-UA",
+        "title": "Removal of COVID-19 misinformation",
+        "url": "https://www.oversightboard.com/decision/pao-sabu4p2s/",
+        "excerpt": "Misinformation about health during public health emergencies 10. Prompted by the COVID-19 pandemic and a surge of misinformation observed on its platforms, Meta began removing COVID-19 misinformation in January of 2020. Its policy, and the types of claims subject to removal, evolved over the following two-years and culminated in the current section on",
+        "score": 0.2788,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0a7a34eddede17a5",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "Meta\u2019s proposed options, the policy would be applied in a way that any content naming or depicting designated dangerous individuals that is ambiguous or unclear in its intent is by default treated as violating, thus placing the burden of clarity of intent on the user. The December 2023 changes incorporate this application into the Dangerous Organizations and",
+        "score": 0.2757,
+        "source_type": "policy"
+      },
+      {
+        "chunk_id": "0e05a50f3fb81eb9",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "). It similarly reversed Meta\u2019s removal of a user\u2019s post misattributing a quote to Joseph Goebbels (",
+        "score": 0.3521,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "dd8a102bd541df7a",
+        "case_id": "FB-57SPP63Y",
+        "title": "Reporting on Pakistani Parliament Speech",
+        "url": "https://www.oversightboard.com/decision/fb-57spp63y/",
+        "excerpt": ", Human Rights Committee, 2014. 5. User Submissions Following Meta\u2019s referral and the Board\u2019s decision to accept the case, the user was sent a message notifying them of the Board\u2019s review and providing them with an opportunity to submit a statement to the Board. The user did not submit a statement. 6. Meta\u2019s Submissions When Meta reviewed the content, the co",
+        "score": 0.3373,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "c7d93ec5c30afcc0",
+        "case_id": "FB-Q98QPZB1",
+        "title": "Journalist Recounting Meeting in Gaza",
+        "url": "https://www.oversightboard.com/decision/fb-q98qpzb1/",
+        "excerpt": "discourse context is explicitly mentioned in the content so there is no ambiguity [about] the intent of the user\u201d in this case.",
+        "score": 0.3298,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "69c8a2ef659beda5",
+        "case_id": "BUN-3BCZQSYP",
+        "title": "Reports of Israeli Rape Victims",
+        "url": "https://www.oversightboard.com/decision/bun-3bczqsyp/",
+        "excerpt": "for additional information and background). Meta initially removed both pieces of content from Facebook in these two cases. The user appealed Meta\u2019s decisions to the Board. After the Board brought these cases to Meta\u2019s attention, the company determined the posts no longer violated its policies, given the updated allowance, and restored them both.",
+        "score": 0.3291,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "e86579a6339a3b65",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "is on the list. Reporting on those situations may also often include signals of violence, such as the depiction of an armament, which outside the context of the reporting on, neutral discussion or condemnation exceptions, can be an indicator of a policy violation. It is therefore important that Meta applies a policy exception in instances in which content re",
+        "score": 0.3289,
+        "source_type": "precedent"
+      },
+      {
+        "chunk_id": "435ae71a18a02a8c",
+        "case_id": "PAO-LOPP03UK",
+        "title": "Referring to Designated Dangerous Individuals as \u201cShaheed\u201d",
+        "url": "https://www.oversightboard.com/decision/pao-lopp03uk/",
+        "excerpt": "), confirmed these assumptions and concerns. 40. Numerous expert and stakeholder submissions to the Board also described negative impacts on freedom of expression resulting from removing content that uses the term \u201cshaheed\u201d (see public comments, e.g., PC-11196 \u2013 Integrity Institute; PC-11164 \u2013 SMEX, PC-11183 ECNL EFF, PC-11190 \u2013 Brennan Centre; PC-11188 \u2013 Di",
+        "score": 0.3258,
+        "source_type": "precedent"
+      }
+    ],
+    "citation_ids": [
+      "db0445071691f483"
+    ],
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "fallback_used": false
+  }
+]
